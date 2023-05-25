@@ -1,0 +1,16 @@
+@import '@variable';
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.main {
+  // display: flex;
+  // justify-content: space-between;
+  height: 90px;
+  background: rgb(198, 247, 2);
+}

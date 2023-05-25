@@ -21,7 +21,8 @@
     ],
     "baseUrl": "./app",
     "paths": {
-      "@/*": ["*"]
+      "@/*": ["*"],
+      "@variable": ["styles/variable.scss"]
     }
   },
   "include": [
