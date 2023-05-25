@@ -6,9 +6,19 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "next lint --dir app",
+    "lint:fix": "eslint app --ext .js,jsx,.ts,.tsx --fix",
+    "prepare": "husky install",
+    "check-types": "tsc --pretty --noEmit",
+    "check-format": "prettier --check .",
+    "check-lint": "eslint . --ext ts --ext tsx --ext js",
+    "format": "prettier --write .",
+    "test-all": "npm run check-format && npm run check-lint && npm run check-types",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "lint-staged": {
+      "*.{ts,tsx}": "eslint --ext .tsx --ext .ts --fix"
+    }
   },
   "dependencies": {
     "@types/node": "20.2.3",
@@ -31,7 +41,10 @@
     "@storybook/nextjs": "^7.0.17",
     "@storybook/react": "^7.0.17",
     "@storybook/testing-library": "^0.0.14-next.2",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-storybook": "^0.6.12",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
     "storybook": "^7.0.17"
   }
 }
