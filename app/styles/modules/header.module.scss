@@ -8,7 +8,72 @@
   z-index: 10;
 }
 
+.top {
+  height: 38px;
+  background-color: var(--c-main);
+}
+
 .main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 90px;
   background: var(--c-main);
+  padding: 20px 140px;
+
+  @include mq(lg) {
+    display: block;
+    width: 100%;
+  }
+
+  @include mq(md) {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    padding: 10px 10px 10px 20px;
+  }
+}
+
+.title {
+  cursor: pointer;
+
+  h1 {
+    font-size: 24px;
+    letter-spacing: 0.2em;
+
+    @include mq(md) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}
+
+.link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+
+  @include mq(lg) {
+    display: none;
+  }
+}
+
+.sp {
+  display: none;
+  width: 80px;
+  @include mq(md) {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__search {
+    cursor: pointer;
+    margin-right: 30px;
+  }
+
+  &__menu {
+    cursor: pointer;
+    margin-right: 10px;
+  }
 }
