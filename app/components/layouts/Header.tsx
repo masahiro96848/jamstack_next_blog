@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
+import { AiOutlineMenu } from 'react-icons/ai'
+import { BsSearch } from 'react-icons/bs'
 import styles from '@/styles/modules/header.module.scss'
 
 const Header = () => {
@@ -22,6 +24,17 @@ const Header = () => {
             <Link href="">
               <h2>プロフィール</h2>
             </Link>
+          </div>
+
+          <div className={styles.sp}>
+            {/* 検索アイコン */}
+            <div className={styles.sp__search}>
+              <BsSearch size={25} />
+            </div>
+            {/* ハンバーガーメニュー */}
+            <div className={styles.sp__menu}>
+              <AiOutlineMenu size={25} />
+            </div>
           </div>
         </div>
       </div>

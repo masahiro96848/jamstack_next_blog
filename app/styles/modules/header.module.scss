@@ -58,3 +58,22 @@
     display: none;
   }
 }
+
+.sp {
+  display: none;
+  width: 80px;
+  @include mq(md) {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__search {
+    cursor: pointer;
+    margin-right: 30px;
+  }
+
+  &__menu {
+    cursor: pointer;
+    margin-right: 10px;
+  }
+}
