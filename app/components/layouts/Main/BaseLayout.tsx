@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Footer from '@/components//layouts/Footer'
-import Header from '@/components/layouts/Header'
+import { Footer } from '@/components//layouts/Footer'
+import { Header } from '@/components/layouts/Header'
 import styles from '@/styles/modules/baseLayout.module.scss'
 
 /**
@@ -11,9 +11,7 @@ import styles from '@/styles/modules/baseLayout.module.scss'
 //   children: React.ReactNode
 // }
 
-const BaseLayout = ({ children }: { children: React.ReactNode }) => {
-  // props
-
+export const BaseLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <div className={styles.wrapper}>
@@ -28,5 +26,3 @@ const BaseLayout = ({ children }: { children: React.ReactNode }) => {
     </>
   )
 }
-
-export default BaseLayout

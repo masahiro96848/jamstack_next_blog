@@ -1,4 +1,4 @@
-import BaseLayout from '@/components/layouts/Main/BaseLayout'
+import { BaseBlogPostLayout } from '@/components/layouts/Main/BaseBlogPostLayout'
 
 export const metadata = {
   title: 'Create Next App',
@@ -13,7 +13,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body>
-        <BaseLayout>{children}</BaseLayout>
+        <BaseBlogPostLayout>{children}</BaseBlogPostLayout>
       </body>
     </html>
   )
