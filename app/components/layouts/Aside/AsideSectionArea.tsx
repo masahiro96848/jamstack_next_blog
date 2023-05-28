@@ -22,5 +22,3 @@ export const AsideSectionArea = (props: Props) => {
     </>
   )
 }
-
-export default AsideSectionArea
