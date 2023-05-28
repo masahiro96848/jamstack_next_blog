@@ -1,6 +1,7 @@
 import React from 'react'
 import { ArchiveArea } from '@/components/layouts/Aside/ArchiveArea'
 import { CategoryArea } from '@/components/layouts/Aside/CatagoryArea'
+import { ProfileArea } from '@/components/layouts/Aside/ProfileArea'
 import styles from '@/styles/layouts/aside/asideLayout.module.scss'
 
 export const AsideLayout = () => {
@@ -12,8 +13,13 @@ export const AsideLayout = () => {
       </div>
 
       <aside className={styles.aside}>
-        {/* カテゴリー */}
+        {/* プロフィール */}
         <div className={styles.profile}>
+          <ProfileArea />
+        </div>
+
+        {/* カテゴリー */}
+        <div className={styles.category}>
           <CategoryArea />
         </div>
 
