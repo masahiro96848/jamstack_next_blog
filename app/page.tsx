@@ -1,10 +1,10 @@
-import Header from '@/components/layouts/Header'
+import { NextPage } from 'next'
+// import BaseLayout from '@/components/layouts/Main/BaseLayout'
+
 import '@/styles/globals.scss'
 
-export default function Home() {
-  return (
-    <div>
-      <Header />
-    </div>
-  )
+const Home = () => {
+  return <div></div>
 }
+
+export default Home

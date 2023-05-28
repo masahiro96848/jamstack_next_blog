@@ -1,0 +1,39 @@
+@import '@variable';
+
+.container {
+  border: 1px solid black;
+  height: 400px;
+  word-break: break-all;
+  padding: 20px 20px;
+  text-align: center;
+}
+
+.imageArea {
+  padding-top: 30px;
+}
+
+.image {
+  border-radius: 50%;
+}
+
+.bar {
+  margin: 20px 20px;
+  border: 1px solid black;
+}
+
+.name {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.content {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.more {
+  cursor: pointer;
+  padding: 10px 15px;
+  background-color: gray;
+  color: white;
+}

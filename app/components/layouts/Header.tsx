@@ -4,7 +4,7 @@ import { AiOutlineMenu } from 'react-icons/ai'
 import { BsSearch } from 'react-icons/bs'
 import styles from '@/styles/modules/header.module.scss'
 
-const Header = () => {
+export const Header = () => {
   return (
     <div className={styles.container}>
       <div className={styles.top}>
@@ -41,5 +41,3 @@ const Header = () => {
     </div>
   )
 }
-
-export default Header

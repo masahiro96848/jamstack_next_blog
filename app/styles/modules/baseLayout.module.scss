@@ -1,0 +1,40 @@
+@import '@variable';
+
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+}
+
+.main {
+  display: flex;
+  justify-content: space-around;
+  margin: 130px auto 20px;
+  width: 1160px;
+  min-height: 600px;
+
+  //   background-color: black;
+
+  @include mq(xl) {
+    display: block;
+    margin: 30px auto 20px;
+    width: 70%;
+  }
+
+  @include mq(lg) {
+    width: 90%;
+    min-height: 700px;
+  }
+
+  @include mq(md) {
+    margin: 10px auto 20px;
+    min-height: 650px;
+  }
+}
+
+.footer {
+  width: 100%;
+}
