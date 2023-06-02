@@ -1,6 +1,6 @@
 import React from 'react'
-
 import { Footer } from '@/components//layouts/Footer'
+import { Breadcrumb } from '@/components/layouts/Breadcrumb'
 import { Header } from '@/components/layouts/Header'
 import styles from '@/styles/modules/baseLayout.module.scss'
 
@@ -17,6 +17,9 @@ export const BaseLayout = ({ children }: { children: React.ReactNode }) => {
       <div className={styles.wrapper}>
         <div className={styles.header}>
           <Header />
+        </div>
+        <div className={styles.breadcrumb}>
+          <Breadcrumb />
         </div>
         <div className={styles.main}>{children}</div>
         <div className={styles.footer}>
