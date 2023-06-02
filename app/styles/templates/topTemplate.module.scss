@@ -1,0 +1,35 @@
+@import '@variable';
+
+.container {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+
+.imageArea {
+  margin-right: 20px;
+}
+
+.title {
+  font-size: 24px;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.category {
+  font-size: 14px;
+  padding: 8px 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.date {
+  font-size: 12px;
+}

@@ -1,9 +1,10 @@
 import { NextPage } from 'next'
+import { TopTemplate } from '@/components/templates/TopTemplate'
 
 import '@/styles/globals.scss'
 
-const Home = () => {
-  return <div></div>
+const TopPage = () => {
+  return <TopTemplate />
 }
 
-export default Home
+export default TopPage
