@@ -1,5 +1,4 @@
 import { NextPage } from 'next'
-// import BaseLayout from '@/components/layouts/Main/BaseLayout'
 
 import '@/styles/globals.scss'
 

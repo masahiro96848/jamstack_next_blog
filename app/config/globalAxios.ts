@@ -3,12 +3,12 @@
  */
 import axios from 'axios'
 
-const MICROCMS_API_KEY: string = process.env.MICROCMS_API_KEY || ''
+const X_MICROCMS_API_KEY: string = process.env.X_MICROCMS_API_KEY || ''
 
 const globalAxios = axios.create({
   headers: {
-    'Content-Type': 'application/json',
-    'MICRO-CMS-KEY': MICROCMS_API_KEY,
+    'Content-type': 'application/json',
+    'X-MICROCMS-API-KEY': X_MICROCMS_API_KEY,
   },
 })
 
