@@ -6,6 +6,20 @@
 }
 
 .header {
+  height: 90px;
+  width: 100%;
+
+  @include mq(lg) {
+    height: 90px;
+  }
+
+  @include mq(md) {
+    height: 60px;
+  }
+}
+
+.breadcrumb {
+  height: 40px;
   width: 100%;
 }
 
@@ -15,8 +29,6 @@
   margin: 130px auto 20px;
   width: 1160px;
   min-height: 600px;
-
-  //   background-color: black;
 
   @include mq(xl) {
     display: block;
