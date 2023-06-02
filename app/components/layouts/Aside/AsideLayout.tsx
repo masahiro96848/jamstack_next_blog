@@ -7,12 +7,11 @@ import styles from '@/styles/layouts/aside/asideLayout.module.scss'
 export const AsideLayout = () => {
   return (
     <>
-      {/* 検索エリア */}
-      <div>
-        <input type="text" placeholder="検索" className={styles.search} />
-      </div>
-
       <aside className={styles.aside}>
+        {/* 検索エリア */}
+        <div>
+          <input type="text" placeholder="検索" className={styles.search} />
+        </div>
         {/* プロフィール */}
         <div className={styles.profile}>
           <ProfileArea />

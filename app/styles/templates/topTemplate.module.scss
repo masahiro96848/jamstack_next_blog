@@ -4,14 +4,42 @@
   display: flex;
   margin-top: 20px;
   margin-bottom: 80px;
+
+  @include mq(md) {
+    display: block;
+  }
 }
 
 .imageArea {
   margin-right: 20px;
+  @include mq(md) {
+    margin-right: 0px;
+    text-align: center;
+  }
+}
+
+.image {
+  width: 300px;
+  height: 200px;
+  @include mq(md) {
+    width: 85%;
+  }
+}
+
+.articleArea {
+  @include mq(md) {
+    margin-top: 20px;
+    margin: 20px auto;
+    width: 85%;
+  }
 }
 
 .title {
   font-size: 24px;
+
+  @include mq(md) {
+    font-size: 20px;
+  }
 }
 
 .categories {
@@ -28,6 +56,10 @@
   margin-bottom: 10px;
   border: 1px solid black;
   border-radius: 10px;
+
+  @include mq(md) {
+    font-size: 12px;
+  }
 }
 
 .date {

@@ -26,8 +26,8 @@
 .main {
   display: flex;
   justify-content: space-around;
-  margin: 130px auto 20px;
-  width: 1160px;
+  margin: 60px auto 20px;
+  width: 1200px;
   min-height: 600px;
 
   @include mq(xl) {

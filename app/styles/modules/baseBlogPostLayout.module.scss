@@ -1,10 +1,13 @@
 @import '@variable';
 
 .article {
-  width: 820px;
   padding: 10px;
 
   @include mq(xl) {
+    width: 100%;
+  }
+
+  @include mq(md) {
     width: 100%;
   }
 }
