@@ -3,7 +3,19 @@
 .search {
   border: 1px solid black;
   padding: 10px 20px;
-  width: 300px;
+  width: 100%;
+
+  @include mq(xl) {
+    width: 300px;
+  }
+
+  @include mq(lg) {
+    width: 300px;
+  }
+
+  @include mq(md) {
+    width: 100%;
+  }
 }
 
 .aside {
@@ -11,6 +23,11 @@
   padding: 10px;
   margin-top: 45px;
   margin-bottom: 100px;
+
+  @include mq(md) {
+    width: 100%;
+    margin-top: 0px;
+  }
 }
 
 .profile {

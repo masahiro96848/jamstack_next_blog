@@ -7,6 +7,10 @@
   @include mq(xl) {
     width: 100%;
   }
+
+  @include mq(md) {
+    width: 100%;
+  }
 }
 
 .aside {
