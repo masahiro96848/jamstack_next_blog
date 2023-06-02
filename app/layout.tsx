@@ -12,9 +12,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body>
-        <BaseBlogPostLayout>{children}</BaseBlogPostLayout>
-      </body>
+      <body>{children}</body>
     </html>
   )
 }
