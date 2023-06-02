@@ -22,8 +22,14 @@
   background: var(--c-main);
   padding: 20px 140px;
 
+  @include mq(xl) {
+    display: flex;
+  }
+
   @include mq(lg) {
-    display: block;
+    display: flex;
+    padding: 20px 70px;
+    justify-content: space-between;
     width: 100%;
   }
 
@@ -55,7 +61,7 @@
   align-items: center;
   width: 350px;
 
-  @include mq(lg) {
+  @include mq(md) {
     display: none;
   }
 }
