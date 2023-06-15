@@ -17,7 +17,7 @@ export const getBlogsApi = async (): Promise<BlogPostType> => {
   const blogData: BlogPostType = initBlogPost
   try {
     const res = await globalAxios.get(BASE_URL)
-    blogData.blogList = res.data.contents
+    blogData.blogList = res.data
   } catch (error) {
     console.log(error)
     throw new Error('API ERROR: getBlogApi')

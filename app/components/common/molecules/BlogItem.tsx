@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+
+/** styles */
 import styles from '@/styles/objects/components/blogItem.module.scss'
 
 import { BlogItemType } from '@/types/Blog'

@@ -1,7 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+
+/** components */
 import { BaseBlogPostLayout } from '@/components/layouts/Main/BaseBlogPostLayout'
+/** api */
+import { getBlogsApi } from '@/apis/BlogApi'
+/** styles */
 import styles from '@/styles/templates/topTemplate.module.scss'
 
 export const TopTemplate = () => {
