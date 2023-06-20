@@ -17,24 +17,26 @@ export const BlogItem = (props: Props) => {
   return (
     <Link href="/" prefetch={false}>
       <div className={styles.container}>
-        <div className={styles.image}>
-          {/* <Image
-          src="/sample01.png"
-          width={100}
-          height={100}
-          alt="blog_list_image"
-          className={styles.image}
-        /> */}
+        <div className={styles.imageArea}>
+          <Image
+            src={blogItem.image.url}
+            width={300}
+            height={200}
+            alt="blog_list_image"
+            className={styles.image}
+          />
         </div>
-        <div className={styles.title}>{blogItem.title}</div>
-        <div className={styles.categories}>
-          <span>Jest</span>
-          <span>TypeScript</span>
-          <span>テストコード</span>
-        </div>
+        <div className={styles.articleArea}>
+          <div className={styles.title}>{blogItem.title}</div>
+          <div className={styles.categories}>
+            <span className={styles.category}>Jest</span>
+            <span className={styles.category}>TypeScript</span>
+            <span className={styles.category}>テストコード</span>
+          </div>
 
-        <div className={styles.date}>
-          <p>{blogItem.createdAt}</p>
+          <div className={styles.date}>
+            <p>{blogItem.createdAt}</p>
+          </div>
         </div>
       </div>
     </Link>
