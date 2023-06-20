@@ -12,14 +12,14 @@
   ],
   "rules": {
     // "no-console": ["warn", { "allow": ["warn", "error"] }],
-    "import/order": [
-      "error",
-      {
-        "alphabetize": {
-          "order": "asc"
-        }
-      }
-    ],
+    // "import/order": [
+    //   "error",
+    //   {
+    //     "alphabetize": {
+    //       "order": "asc"
+    //     }
+    //   }
+    // ],
     "react/jsx-filename-extension": [
       0,
       {
