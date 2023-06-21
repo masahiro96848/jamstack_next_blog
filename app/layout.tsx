@@ -1,4 +1,6 @@
 import { BaseBlogPostLayout } from '@/components/layouts/Main/BaseBlogPostLayout'
+/* contexts */
+import { RootContextProvider } from '@/contexts'
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,7 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body>{children}</body>
+      <RootContextProvider>
+        <body>{children}</body>
+      </RootContextProvider>
     </html>
   )
 }

@@ -6,8 +6,11 @@ import { BlogItem } from '../common/molecules/BlogItem'
 /** api */
 import { getBlogsApi } from '@/apis/BlogApi'
 
+import { useBlogState } from '@/contexts/BlogContext'
+
 export const TopTemplate = async () => {
   const data = await getBlogsApi()
+  // const { blogList } = useBlogState()
   const blogList = data.blogList
 
   return (
