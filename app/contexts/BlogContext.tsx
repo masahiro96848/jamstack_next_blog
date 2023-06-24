@@ -1,15 +1,8 @@
 'use client'
-import React, {
-  createContext,
-  ReactNode,
-  useContext,
-  Dispatch,
-  useReducer,
-  useState,
-} from 'react'
+import React, { Dispatch, useReducer } from 'react'
 
 /** types */
-import { BlogItemType, BlogPostType } from '@/types/Blog'
+import { BlogItemType } from '@/types/Blog'
 /** utils */
 import { initBlogPost } from '@/config/initState'
 
@@ -52,7 +45,7 @@ const BlogReducer = (state: BlogStateType, action: BlogActionType) => {
 // ----- Context -----
 type BlogDispatchType = Dispatch<BlogActionType>
 
-const BlogStateContext = React.createContext(initState as BlogStateType)
+export const BlogStateContext = React.createContext<BlogStateType>(initState)
 const BlogDispatchContext = React.createContext<BlogDispatchType>(() => {
   // throw new Error('Context not provided.')
 })

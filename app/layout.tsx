@@ -14,9 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <RootContextProvider>
-        <body>{children}</body>
-      </RootContextProvider>
+      <body>{children}</body>
     </html>
   )
 }

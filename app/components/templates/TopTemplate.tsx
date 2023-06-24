@@ -2,11 +2,11 @@ import React from 'react'
 
 /** components */
 import { BaseBlogPostLayout } from '@/components/layouts/Main/BaseBlogPostLayout'
-import { BlogItem } from '../common/molecules/BlogItem'
 /** api */
 import { getBlogsApi } from '@/apis/BlogApi'
+import { BlogContextProvider } from '@/contexts/BlogContextProvider'
 
-import { useBlogState } from '@/contexts/BlogContext'
+import { BlogList } from '../layouts/Main/BlogList'
 
 export const TopTemplate = async () => {
   const data = await getBlogsApi()
@@ -16,12 +16,11 @@ export const TopTemplate = async () => {
   return (
     <>
       {/* ブログ記事一覧表示 */}
-      <BaseBlogPostLayout>
-        {blogList.length > 0 &&
-          blogList.map((blogItem, index) => (
-            <BlogItem key={index} blogItem={blogItem} />
-          ))}
-      </BaseBlogPostLayout>
+      <BlogContextProvider blogList={blogList}>
+        <BaseBlogPostLayout>
+          <BlogList />
+        </BaseBlogPostLayout>
+      </BlogContextProvider>
     </>
   )
 }
