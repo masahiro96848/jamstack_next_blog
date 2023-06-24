@@ -7,7 +7,7 @@ import { initBlogPost } from '@/config/initState'
 import { BlogPostType } from '@/types/Blog'
 
 const BASE_URL = `${
-  process.env.MICROCMS_SERVICE_DOMAIN || 'http://localhost:3000/'
+  process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000/'
 }/blogs/`
 
 /**
