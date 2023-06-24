@@ -52,15 +52,19 @@ const BlogDispatchContext = React.createContext<BlogDispatchType>(() => {
 
 // ----- ContextProviderType -----
 type Props = {
+  blogList: BlogItemType[]
   children: React.ReactNode
 }
 
-export const BlogContextProvider: React.FC<Props> = ({ children }: Props) => {
+export const BlogContextProvider: React.FC<Props> = ({
+  children,
+  blogList,
+}: Props) => {
   const [state, dispatch] = useReducer(BlogReducer, initState)
 
   return (
     <BlogDispatchContext.Provider value={dispatch}>
-      <BlogStateContext.Provider value={state}>
+      <BlogStateContext.Provider value={{ blogList }}>
         {children}
       </BlogStateContext.Provider>
     </BlogDispatchContext.Provider>

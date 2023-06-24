@@ -4,13 +4,13 @@ import React from 'react'
 import { BaseBlogPostLayout } from '@/components/layouts/Main/BaseBlogPostLayout'
 /** api */
 import { getBlogsApi } from '@/apis/BlogApi'
-import { BlogContextProvider } from '@/contexts/BlogContextProvider'
+/** context */
+import { BlogContextProvider } from '@/contexts/BlogContext'
 
-import { BlogList } from '../layouts/Main/BlogList'
+import { BlogList } from '@/components/layouts/Main/BlogList'
 
 export const TopTemplate = async () => {
   const data = await getBlogsApi()
-  // const { blogList } = useBlogState()
   const blogList = data.blogList
 
   return (

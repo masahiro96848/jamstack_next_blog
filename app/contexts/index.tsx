@@ -19,5 +19,7 @@ type Props = {
  * @returns
  */
 export const RootContextProvider: React.FC<Props> = ({ children }: Props) => {
-  return <BlogContextProvider>{children}</BlogContextProvider>
+  return <></>
+
+  // <BlogContextProvider>{children}</BlogContextProvider>
 }
