@@ -3,7 +3,7 @@
  */
 
 import globalAxios from '@/config/globalAxios'
-import { initBlogPost } from '@/config/initState'
+import { initBlogPost, initBlogItem } from '@/config/initState'
 import { BlogPostType } from '@/types/Blog'
 
 const BASE_URL = `${
@@ -23,4 +23,22 @@ export const getBlogsApi = async (): Promise<BlogPostType> => {
   }
 
   return blogData
+}
+
+/**
+ * ブログ記事詳細取得
+ */
+export const getBlogByApi = async (id: string, draftKey: string) => {
+  let blogDetail = initBlogItem
+  try {
+    const res = await globalAxios.get(
+      `${BASE_URL}${id}${draftKey !== '' ? `?draftKey=${draftKey}` : ''}`,
+    )
+    blogDetail = res.data
+  } catch (error) {
+    console.log(error)
+    throw new Error(`API ERROR: getBlogByApi`)
+  }
+
+  return blogDetail
 }
