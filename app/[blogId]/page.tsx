@@ -4,7 +4,11 @@
 import React from 'react'
 
 const BlogDetail = () => {
-  return <></>
+  return (
+    <div>
+      <p>テストです</p>
+    </div>
+  )
 }
 
 export default BlogDetail
