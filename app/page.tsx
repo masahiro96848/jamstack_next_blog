@@ -1,7 +1,11 @@
-import React, { useEffect } from 'react'
-import { NextPage, GetStaticProps } from 'next'
-import { TopTemplate } from '@/components/templates/TopTemplate'
+/**
+ * ブログ記事一覧ページ
+ */
 
+import React, { useEffect } from 'react'
+/* components */
+import { TopTemplate } from '@/components/templates/TopTemplate'
+/* styles */
 import '@/styles/globals.scss'
 
 const TopPage = async () => {

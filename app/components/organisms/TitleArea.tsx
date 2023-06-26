@@ -9,11 +9,27 @@ import Link from 'next/link'
 import { DateArea } from '../common/molecules/DateArea'
 
 import styles from '@/styles/objects/components/organisms/titleArea.module.scss'
+import { BlogItemType } from '@/types/Blog'
+
+/**
+ * Props
+ */
+type Props = {
+  blogItem: BlogItemType
+}
+
+/**
+ * TitleArea
+ * @param {Props} props
+ * @returns
+ */
 
 export const TitleArea: React.FC = () => {
+  // const { blogItem } = props
+
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>ブログのタイトル</h2>
+      <h2 className={styles.title}>ブログタイトル</h2>
       <div className={styles.category}>
         <div>
           <Link href="">

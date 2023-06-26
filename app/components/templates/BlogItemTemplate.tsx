@@ -6,18 +6,38 @@ import React from 'react'
 import Image from 'next/image'
 /* components */
 import { BaseBlogPostLayout } from '@/components/layouts/Main/BaseBlogPostLayout'
+import { TitleArea } from '@/components/organisms/TitleArea'
+/* api */
+import { getBlogByApi } from '@/apis/BlogApi'
 /* styles */
 import styles from '@/styles/templates/blogItemTemplate.module.scss'
-export const BlogItemTemplate: React.FC = () => {
+import { BlogItemType } from '@/types/Blog'
+
+/**
+ * Props
+ */
+type Props = {
+  blogItem: BlogItemType
+  draftKey?: any
+}
+
+/**
+ * BlogItemTemplate
+ * @param {Props} props
+ * @returns
+ */
+export const BlogItemTemplate = async () => {
+  // const { blogItem, draftKey } = props
+
   return (
     <BaseBlogPostLayout>
       <section className={styles.container}>
         <div className={styles.image}>
-          <Image src="" alt="picture" height={180} width={180} />
+          <Image src="/test01.jpg" alt="picture" height={450} width={850} />
         </div>
         <main className={styles.main}>
           {/* ブログタイトルエリア */}
-
+          <TitleArea />
           {/* 目次 */}
 
           {/* 記事本文 */}

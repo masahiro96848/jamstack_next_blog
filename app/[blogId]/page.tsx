@@ -1,14 +1,13 @@
 /**
- * Blog記事詳細
+ * ブログ記事詳細ページ
  */
 import React from 'react'
+/* components */
+import { BlogItemTemplate } from '@/components/templates/BlogItemTemplate'
 
 const BlogDetail = () => {
-  return (
-    <div>
-      <p>テストです</p>
-    </div>
-  )
+  /* @ts-expect-error Server Component */
+  return <BlogItemTemplate />
 }
 
 export default BlogDetail
