@@ -5,13 +5,8 @@
 import React, { useEffect } from 'react'
 /* components */
 import { TopTemplate } from '@/components/templates/TopTemplate'
-/* styles */
-import '@/styles/globals.scss'
 
 const TopPage = async () => {
-  return (
-    /* @ts-expect-error Server Component */
-    <TopTemplate />
-  )
+  return <TopTemplate />
 }
 export default TopPage

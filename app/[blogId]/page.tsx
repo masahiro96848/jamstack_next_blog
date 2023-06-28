@@ -6,7 +6,6 @@ import React from 'react'
 import { BlogItemTemplate } from '@/components/templates/BlogItemTemplate'
 
 const BlogDetail = () => {
-  /* @ts-expect-error Server Component */
   return <BlogItemTemplate />
 }
 
