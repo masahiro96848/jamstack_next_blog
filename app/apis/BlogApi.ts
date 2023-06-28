@@ -3,7 +3,7 @@
  */
 
 import globalAxios from '@/config/globalAxios'
-import { initBlogPost, initBlogItem } from '@/config/initState'
+import { initBlogData, initBlogItem } from '@/constants/initState'
 import { BlogPostType } from '@/types/Blog'
 
 const BASE_URL = `${
@@ -14,7 +14,7 @@ const BASE_URL = `${
  * ブログ記事一覧取得
  */
 export const getBlogsApi = async (): Promise<BlogPostType> => {
-  const blogData: BlogPostType = initBlogPost
+  const blogData: BlogPostType = initBlogData
   try {
     const res = await globalAxios.get(BASE_URL)
     blogData.blogList = res.data.contents

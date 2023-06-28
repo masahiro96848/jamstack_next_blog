@@ -3,8 +3,6 @@ import React, { Dispatch, useReducer } from 'react'
 
 /** types */
 import { BlogItemType } from '@/types/Blog'
-/** utils */
-import { initBlogPost } from '@/config/initState'
 
 // ----- State -----
 export type BlogStateType = {
