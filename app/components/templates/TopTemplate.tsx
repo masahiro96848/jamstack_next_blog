@@ -17,7 +17,7 @@ export const TopTemplate = async () => {
     <>
       {/* ブログ記事一覧表示 */}
       <BlogContextProvider blogList={blogList}>
-        <BaseBlogPostLayout>
+        <BaseBlogPostLayout breadName="">
           <BlogList />
         </BaseBlogPostLayout>
       </BlogContextProvider>

@@ -30,7 +30,7 @@ export const BlogItemTemplate = async () => {
   // const { blogItem, draftKey } = props
 
   return (
-    <BaseBlogPostLayout>
+    <BaseBlogPostLayout breadName="ブログ詳細">
       <section className={styles.container}>
         <div className={styles.image}>
           <Image src="/test01.jpg" alt="picture" height={450} width={850} />

@@ -1,17 +1,25 @@
+/**
+ * layouts/main/BaseLayout.tsx
+ * @package component
+ */
+
 import React from 'react'
 import { Footer } from '@/components//layouts/Footer'
-import { Breadcrumb } from '@/components/layouts/Breadcrumb'
+import { BreadcrumbList } from '@/components/layouts/Main/BreadcrumbList'
 import { Header } from '@/components/layouts/Header'
 import styles from '@/styles/modules/baseLayout.module.scss'
 
 /**
  * Props
  */
-// export type Props = {
-//   children: React.ReactNode
-// }
+export type Props = {
+  children: React.ReactNode
+  breadName?: string
+}
 
-export const BaseLayout = ({ children }: { children: React.ReactNode }) => {
+export const BaseLayout: React.FC<Props> = (props: Props) => {
+  /* props */
+  const { children, breadName } = props
   return (
     <>
       <div className={styles.wrapper}>
@@ -19,7 +27,7 @@ export const BaseLayout = ({ children }: { children: React.ReactNode }) => {
           <Header />
         </div>
         <div className={styles.breadcrumb}>
-          <Breadcrumb />
+          {!!breadName && <BreadcrumbList breadName={breadName} />}
         </div>
         <div className={styles.main}>{children}</div>
         <div className={styles.footer}>
