@@ -6,13 +6,15 @@ import styles from '@/styles/modules/baseBlogPostLayout.module.scss'
 
 type Props = {
   children: React.ReactNode
+  breadName: string
 }
-export const BaseBlogPostLayout = (props: Props) => {
-  const { children } = props
+export const BaseBlogPostLayout: React.FC<Props> = (props: Props) => {
+  /* props */
+  const { children, breadName } = props
   return (
     <>
       <div>
-        <BaseLayout>
+        <BaseLayout breadName={breadName}>
           <article className={styles.article}>{children}</article>
           <div className={styles.article}>
             <AsideLayout />

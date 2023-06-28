@@ -12,7 +12,7 @@ import styles from '@/styles/templates/profileTemplate.module.scss'
 
 export const ProfileTemplate: React.FC = () => {
   return (
-    <BaseBlogPostLayout>
+    <BaseBlogPostLayout breadName="プロフィール">
       {/* ページタイトル */}
       <PageTitle title="Profile" />
       <section className={styles.container}>
