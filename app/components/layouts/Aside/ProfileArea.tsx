@@ -1,5 +1,6 @@
-import Image from 'next/image'
 import React from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
 import { AsideSectionArea } from '@/components/layouts/Aside/AsideSectionArea'
 import styles from '@/styles/layouts/aside/profileArea.module.scss'
 
@@ -21,7 +22,9 @@ export const ProfileArea = () => {
           <p className={styles.name}>Masahiro</p>
           <p className={styles.content}>フリーランスエンジニア</p>
 
-          <p className={styles.more}>More</p>
+          <Link href={'/profile'}>
+            <p className={styles.more}>More</p>
+          </Link>
 
           <div></div>
         </div>
