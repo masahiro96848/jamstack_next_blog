@@ -4,7 +4,7 @@
 
 import globalAxios from '@/config/globalAxios'
 import { initBlogData, initBlogItem } from '@/constants/initState'
-import { BlogPostType } from '@/types/Blog'
+import { BlogDataType } from '@/types/Blog'
 
 const BASE_URL = `${
   process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000/'
@@ -13,8 +13,8 @@ const BASE_URL = `${
 /**
  * ブログ記事一覧取得
  */
-export const getBlogsApi = async (): Promise<BlogPostType> => {
-  const blogData: BlogPostType = initBlogData
+export const getBlogsApi = async (): Promise<BlogDataType> => {
+  const blogData: BlogDataType = initBlogData
   try {
     const res = await globalAxios.get(BASE_URL)
     blogData.blogList = res.data.contents

@@ -4,7 +4,7 @@
  */
 
 /* types */
-import { BlogItemType, BlogPostType } from '@/types/Blog'
+import { BlogItemType, BlogDataType } from '@/types/Blog'
 import { CategoryType } from '@/types/Category'
 import { ImageType } from '@/types/Image'
 import { ProfileType } from '@/types/Profile'
@@ -26,6 +26,7 @@ export const initBlogItem: BlogItemType = {
   title: '',
   content: '',
   image: initImageState,
+  categories: [],
   createdAt: '',
   updatedAt: '',
 }
@@ -33,7 +34,7 @@ export const initBlogItem: BlogItemType = {
 /**
  * initBlotPost
  */
-export const initBlogData: BlogPostType = {
+export const initBlogData: BlogDataType = {
   blogList: [],
 }
 

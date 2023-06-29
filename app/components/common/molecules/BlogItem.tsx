@@ -27,12 +27,24 @@ export const BlogItem = (props: Props) => {
           />
         </div>
         <div className={styles.articleArea}>
-          <div className={styles.title}>{blogItem.title}</div>
+          <h2 className={styles.title}>{blogItem.title}</h2>
           <div className={styles.categories}>
+            {blogItem.categories.map((category, index) => {
+              return (
+                <span
+                  className={styles.category}
+                  key={`${category.id}_${index}`}
+                >
+                  {category.name}
+                </span>
+              )
+            })}
+          </div>
+          {/* <div className={styles.categories}>
             <span className={styles.category}>Jest</span>
             <span className={styles.category}>TypeScript</span>
             <span className={styles.category}>テストコード</span>
-          </div>
+          </div> */}
 
           <div className={styles.date}>
             <p>{blogItem.createdAt}</p>
