@@ -7,18 +7,27 @@ import React from 'react'
 import { BaseBlogPostLayout } from '@/components/layouts/Main/BaseBlogPostLayout'
 import { PageTitle } from '@/components/common/atoms/PageTitle'
 /* apis */
-import { getBlogsApi } from '@/apis/BlogApi'
+import { getBlogsContainCategoriesApi } from '@/apis/BlogApi'
+import { getCategoriesApi } from '@/apis/CategoryApi'
+/* context */
 import { BlogContextProvider } from '@/contexts/BlogContext'
-import { BlogList } from '../layouts/Main/BlogList'
+/* components */
+import { BlogList } from '@/components/layouts/Main/BlogList'
 /* styles */
 import styles from '@/styles/templates/categoryTemplate.module.scss'
+import { BlogItemType } from '@/types/Blog'
 
 /**
  * CategoryTemplate
  */
 export const CategoryTemplate = async () => {
-  const data = await getBlogsApi()
-  const blogList = data.blogList
+  const categoryData = await getCategoriesApi()
+  let blogList: BlogItemType[] = []
+  for await (const category of categoryData) {
+    const data = await getBlogsContainCategoriesApi(category.id)
+    blogList = data.blogList
+  }
+
   return (
     <>
       {/* ブログ記事一覧表示 */}

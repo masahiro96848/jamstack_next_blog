@@ -10,8 +10,11 @@ const BASE_URL = `${
   process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000/'
 }/blogs/`
 
+const FILTER = '?filters=categories[contains]'
+
 /**
  * ブログ記事一覧取得
+ * @returns {Promise<BlogDataType>}
  */
 export const getBlogsApi = async (): Promise<BlogDataType> => {
   const blogData: BlogDataType = initBlogData
@@ -22,6 +25,25 @@ export const getBlogsApi = async (): Promise<BlogDataType> => {
     throw new Error('API ERROR: getBlogApi')
   }
 
+  return blogData
+}
+
+/**
+ * カテゴリーに紐づくブログ一覧を取得
+ * @param {string} categoryId
+ * @returns {Promise<BlogDataType>}
+ */
+export const getBlogsContainCategoriesApi = async (
+  categoryId: string,
+): Promise<BlogDataType> => {
+  const blogData: BlogDataType = initBlogData
+
+  try {
+    const res = await globalAxios.get(BASE_URL + FILTER + categoryId)
+    blogData.blogList = res.data.contents
+  } catch (error) {
+    throw new Error(`API ERROR: getBlogsContainCategoriesApi`)
+  }
   return blogData
 }
 
