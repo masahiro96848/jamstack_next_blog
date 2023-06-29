@@ -16,8 +16,8 @@ export const CategoryArea = async () => {
             {categories.length > 0 &&
               categories.map((category, index) => {
                 return (
-                  <li className={styles.list} key={index}>
-                    <Link href="/">
+                  <li className={styles.list} key={`${category.id}_${index}`}>
+                    <Link href={`category/${category.id}`}>
                       <div className={styles.category}>
                         <span>{category.name}</span>
                       </div>
