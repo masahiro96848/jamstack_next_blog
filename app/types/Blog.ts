@@ -1,4 +1,11 @@
+/**
+ * Blog記事のinterface
+ * @package types
+ */
+
+/* types */
 import { ImageType } from '@/types/Image'
+import { CategoryType } from '@/types/Category'
 /**
  * BlogItemType
  */
@@ -8,13 +15,14 @@ export interface BlogItemType {
   title: string
   content: string
   image: ImageType
+  categories: CategoryType[]
   createdAt: string
   updatedAt: string
 }
 
 /**
- * BlogPostType
+ * BlogDataType
  */
-export interface BlogPostType {
+export interface BlogDataType {
   blogList: BlogItemType[]
 }
