@@ -48,6 +48,34 @@ export const getBlogsContainCategoriesApi = async (
 }
 
 /**
+ * 対象日付の月のブログ記事一覧を取得
+ * @param {string} startDate
+ * @param {string} endDate
+ *
+ * @returns {Promise<BlogDataType>}
+ */
+export const getBlogsContainArchiveMonthApi = async (
+  startDate: string,
+  endDate: string,
+): Promise<BlogDataType> => {
+  const blogData: BlogDataType = initBlogData
+
+  try {
+    const res = await globalAxios.get(
+      BASE_URL +
+        '&filters=createdAt[greater_than]' +
+        startDate +
+        '[and]createdAt[less_than]' +
+        endDate,
+    )
+    blogData.blogList = res.data.contents
+  } catch (error) {
+    throw new Error(`API ERROR: getBlogsContainArchiveMonthApi`)
+  }
+  return blogData
+}
+
+/**
  * ブログ記事詳細取得
  */
 export const getBlogByApi = async (id: string, draftKey: string) => {
