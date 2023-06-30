@@ -9,6 +9,8 @@ import { PageTitle } from '@/components/common/atoms/PageTitle'
 import { BlogList } from '../layouts/Main/BlogList'
 /* apis */
 import { getBlogsContainArchiveMonthApi } from '@/apis/BlogApi'
+/* service */
+import { getBlogTargetMonthService } from '@/service/BlogService'
 /* context */
 import { BlogContextProvider } from '@/contexts/BlogContext'
 
@@ -24,7 +26,8 @@ type Props = {
  * ArchiveTemplate
  *
  */
-export const ArchiveTemplate: React.FC<Props> = (props: Props) => {
+export const ArchiveTemplate: React.FC<Props> = async (props: Props) => {
+  // const blogData = await getBlogTargetMonthService()
   // const archiveData = await getBlogsContainArchiveMonthApi()
   return <></>
 }
