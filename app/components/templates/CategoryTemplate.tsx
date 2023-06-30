@@ -15,6 +15,7 @@ import { BlogContextProvider } from '@/contexts/BlogContext'
 import { BlogList } from '@/components/layouts/Main/BlogList'
 /* styles */
 import styles from '@/styles/templates/categoryTemplate.module.scss'
+/* types */
 import { BlogItemType } from '@/types/Blog'
 
 /**
