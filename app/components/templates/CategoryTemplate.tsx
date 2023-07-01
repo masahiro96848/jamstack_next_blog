@@ -18,16 +18,19 @@ import styles from '@/styles/templates/categoryTemplate.module.scss'
 /* types */
 import { BlogItemType } from '@/types/Blog'
 
+type Props = {
+  categoryId: string
+}
+
 /**
  * CategoryTemplate
  */
-export const CategoryTemplate = async () => {
-  const categoryData = await getCategoriesApi()
+export const CategoryTemplate = async (props: Props) => {
+  const { categoryId } = props
+
   let blogList: BlogItemType[] = []
-  for await (const category of categoryData) {
-    const data = await getBlogsContainCategoriesApi(category.id)
-    blogList = data.blogList
-  }
+  const data = await getBlogsContainCategoriesApi(categoryId)
+  blogList = data.blogList
 
   return (
     <>
