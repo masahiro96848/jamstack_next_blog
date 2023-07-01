@@ -18,24 +18,33 @@ import styles from '@/styles/templates/categoryTemplate.module.scss'
 /* types */
 import { BlogItemType } from '@/types/Blog'
 
+type Props = {
+  categoryId: string
+}
+
 /**
  * CategoryTemplate
  */
-export const CategoryTemplate = async () => {
-  const categoryData = await getCategoriesApi()
+export const CategoryTemplate = async (props: Props) => {
+  const { categoryId } = props
   let blogList: BlogItemType[] = []
-  for await (const category of categoryData) {
-    const data = await getBlogsContainCategoriesApi(category.id)
-    blogList = data.blogList
-  }
+
+  // カテゴリー一覧取得
+  const categoryData = await getCategoriesApi()
+  const categoryName = categoryData.filter((category) => {
+    return category.id === categoryId
+  })
+  // カテゴリーに紐づくブログ一覧を取得
+  const data = await getBlogsContainCategoriesApi(categoryId)
+  blogList = data.blogList
 
   return (
     <>
       {/* ブログ記事一覧表示 */}
       <BlogContextProvider blogList={blogList}>
-        <BaseBlogPostLayout breadName="カテゴリー名">
+        <BaseBlogPostLayout breadName={categoryName[0].name}>
           {/* ページタイトル */}
-          <PageTitle title={`「カテゴリー」の記事一覧`} />
+          <PageTitle title={`「${categoryName[0].name}」の記事一覧`} />
           <BlogList />
         </BaseBlogPostLayout>
       </BlogContextProvider>
