@@ -5,6 +5,11 @@
 
 import { ImageType } from './Image'
 
+export interface ShortCode {
+  code: string
+  body: string
+}
+
 /**
  * ProfileType
  */
@@ -21,5 +26,6 @@ export interface ProfileType {
   userImage: ImageType
   articleImage: ImageType
   description: string
-  contents: string
+  body: string
+  shortCodes?: Array<ShortCode>
 }
