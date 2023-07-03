@@ -24,12 +24,13 @@
     "paths": {
       "@/*": ["*"],
       "@variable": ["styles/variable.scss"]
-    }
+    },
+    "types": ["jest"]
   },
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
+    "app/**/*.ts",
+    "app/**/*.tsx",
     ".next/types/**/*.ts",
     "jest.config.js"
   ],
