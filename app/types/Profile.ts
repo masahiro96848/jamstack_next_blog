@@ -26,6 +26,6 @@ export interface ProfileType {
   userImage: ImageType
   articleImage: ImageType
   description: string
-  contents: string
+  body: string
   shortCodes?: Array<ShortCode>
 }

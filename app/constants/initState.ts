@@ -54,7 +54,7 @@ export const initProfileState: ProfileType = {
   userImage: initImageState,
   articleImage: initImageState,
   description: '',
-  contents: '',
+  body: '',
 }
 
 /**

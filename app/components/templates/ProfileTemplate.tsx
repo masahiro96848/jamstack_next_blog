@@ -32,7 +32,15 @@ export const ProfileTemplate: React.FC = async () => {
 
         <main className={styles.main}>
           {/* 記事本文 */}
-          <div dangerouslySetInnerHTML={{ __html: profile.contents }} />
+          <div
+            className={styles.contents}
+            dangerouslySetInnerHTML={{
+              __html:
+                !!profile.shortCodes && profile.shortCodes.length > 0
+                  ? profile.shortCodes[0].body
+                  : '',
+            }}
+          />
         </main>
       </section>
     </BaseBlogPostLayout>
