@@ -32,6 +32,13 @@ npm run check-types ||
     false;
 )
 
+#Check unit test Standars
+npm run test ||
+(
+    echo "\n ❌🟧 test Check ${RED}Failed${NC}. 🟧❌\n Make the required changes listed above, add changes and try to commit again.\n"
+    false;
+)
+
 # If everything passes... Now we can build
 echo "🔥🚀 ${BOLD}All passed... Now we can build.${NC} 🚀🔥"
 
