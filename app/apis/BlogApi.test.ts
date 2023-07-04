@@ -4,7 +4,7 @@
  */
 
 /* apis */
-import { getBlogsApi, getBlogByApi } from '@/apis/BlogApi'
+import { getBlogsApi, getBlogsContainCategoriesApi } from '@/apis/BlogApi'
 /* constants */
 import { initBlogItem, initBlogData } from '@/constants/initState'
 /* types */
@@ -27,7 +27,6 @@ describe('【APIテスト】BlogApi test', () => {
 
     test('【正常系】データを取得できる。', async () => {
       blogItemList.blogList = [blogItem]
-      console.log(blogItemList.blogList)
 
       const apiMockFunc = apiMock.mockReturnValue(Promise.resolve(blogItemList))
 
@@ -41,6 +40,33 @@ describe('【APIテスト】BlogApi test', () => {
 
       try {
         await apiMockFunc()
+      } catch (error) {
+        expect(error).toMatch('error')
+      }
+    })
+  })
+
+  describe('【関数テスト】getBlogsContainCategoriesApi', () => {
+    // mock化
+    const apiMock = jest.fn(getBlogsContainCategoriesApi)
+    // 引数
+    const categoryId = 'typescript'
+
+    test('【正常系】データを取得できる。', async () => {
+      blogItemList.blogList = [blogItem]
+
+      const apiMockFunc = apiMock.mockReturnValue(Promise.resolve(blogItemList))
+      console.log(apiMockFunc(categoryId))
+
+      expect(await apiMockFunc(categoryId)).toEqual(blogItemList)
+    })
+    test('【異常系】例外が発生する。', async () => {
+      blogItemList.blogList = [blogItem]
+
+      const apiMockFunc = apiMock.mockReturnValue(Promise.reject('error'))
+
+      try {
+        await apiMockFunc(categoryId)
       } catch (error) {
         expect(error).toMatch('error')
       }
