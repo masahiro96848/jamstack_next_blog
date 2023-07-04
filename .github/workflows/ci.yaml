@@ -18,4 +18,4 @@ jobs:
 
       # unit test
       - name: Jest unit test
-        run: npm test
+        run: npm run test
