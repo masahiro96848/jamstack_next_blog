@@ -6,11 +6,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     strategy:
       matrix:
         node-version: [18]
-        
+
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
@@ -18,11 +18,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: npm
-          
+
       # ライブラリをインストール
       - name: Install dependencies
         run: npm install
-      
+
       # lint実行
       - name: Static Analytics
         run: npm run check-lint
