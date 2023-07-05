@@ -4,6 +4,7 @@
  */
 import React from 'react'
 import Image from 'next/image'
+import parse from 'html-react-parser'
 /* components */
 import { BaseBlogPostLayout } from '@/components/layouts/Main/BaseBlogPostLayout'
 import { PageTitle } from '@/components/common/atoms/PageTitle'
@@ -32,15 +33,7 @@ export const ProfileTemplate: React.FC = async () => {
 
         <main className={styles.main}>
           {/* 記事本文 */}
-          <div
-            className={styles.contents}
-            dangerouslySetInnerHTML={{
-              __html:
-                !!profile.shortCodes && profile.shortCodes.length > 0
-                  ? profile.shortCodes[0].body
-                  : '',
-            }}
-          />
+          <div className={styles.contents}>{parse(profile.body)}</div>
         </main>
       </section>
     </BaseBlogPostLayout>
