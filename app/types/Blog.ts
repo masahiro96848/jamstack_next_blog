@@ -13,7 +13,7 @@ import { CategoryType } from '@/types/Category'
 export interface BlogItemType {
   id: string
   title: string
-  content: string
+  body: string
   image: ImageType
   categories: CategoryType[]
   createdAt: string

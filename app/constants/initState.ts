@@ -24,7 +24,7 @@ export const initImageState: ImageType = {
 export const initBlogItem: BlogItemType = {
   id: '',
   title: '',
-  content: '',
+  body: '',
   image: initImageState,
   categories: [],
   createdAt: '',

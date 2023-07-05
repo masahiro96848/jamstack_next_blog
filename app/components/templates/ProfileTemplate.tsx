@@ -8,6 +8,7 @@ import parse from 'html-react-parser'
 /* components */
 import { BaseBlogPostLayout } from '@/components/layouts/Main/BaseBlogPostLayout'
 import { PageTitle } from '@/components/common/atoms/PageTitle'
+import { ParsedBody } from '@/components/common/molecules/ParsedBody'
 /* apis */
 import { getProfileApi } from '@/apis/ProfileApi'
 /* styles */
@@ -31,10 +32,7 @@ export const ProfileTemplate: React.FC = async () => {
           />
         </div>
 
-        <main className={styles.main}>
-          {/* 記事本文 */}
-          <div className={styles.contents}>{parse(profile.body)}</div>
-        </main>
+        <ParsedBody body={profile.body} />
       </section>
     </BaseBlogPostLayout>
   )
