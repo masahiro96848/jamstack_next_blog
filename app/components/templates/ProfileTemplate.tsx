@@ -4,7 +4,6 @@
  */
 import React from 'react'
 import Image from 'next/image'
-import parse from 'html-react-parser'
 /* components */
 import { BaseBlogPostLayout } from '@/components/layouts/Main/BaseBlogPostLayout'
 import { PageTitle } from '@/components/common/atoms/PageTitle'
@@ -19,21 +18,24 @@ export const ProfileTemplate: React.FC = async () => {
   const profile = profileData[0]
 
   return (
-    <BaseBlogPostLayout breadName="プロフィール">
-      {/* ページタイトル */}
-      <PageTitle title="Profile" />
-      <section className={styles.container}>
-        <div className={styles.image}>
-          <Image
-            src={profile.articleImage.url}
-            alt="Picture"
-            height={480}
-            width={800}
-          />
-        </div>
+    <>
+      <BaseBlogPostLayout breadName="プロフィール">
+        {/* ページタイトル */}
+        <PageTitle title="Profile" />
+        <section className={styles.container}>
+          <div className={styles.image}>
+            <Image
+              src={profile.articleImage.url}
+              alt="Picture"
+              height={480}
+              width={800}
+            />
+          </div>
 
-        <ParsedBody body={profile.body} />
-      </section>
-    </BaseBlogPostLayout>
+          {/* 記事本文 */}
+          <ParsedBody body={profile.body} />
+        </section>
+      </BaseBlogPostLayout>
+    </>
   )
 }
