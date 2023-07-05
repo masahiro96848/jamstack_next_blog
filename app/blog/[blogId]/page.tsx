@@ -5,8 +5,8 @@ import React from 'react'
 /* components */
 import { BlogItemTemplate } from '@/components/templates/BlogItemTemplate'
 
-const BlogDetail = () => {
+const BlogDetailPage = () => {
   return <BlogItemTemplate />
 }
 
-export default BlogDetail
+export default BlogDetailPage

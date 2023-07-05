@@ -2,12 +2,11 @@ import React from 'react'
 
 /** components */
 import { BaseBlogPostLayout } from '@/components/layouts/Main/BaseBlogPostLayout'
+import { BlogList } from '@/components/layouts/Main/BlogList'
 /** api */
 import { getBlogsApi } from '@/apis/BlogApi'
 /** context */
 import { BlogContextProvider } from '@/contexts/BlogContext'
-
-import { BlogList } from '@/components/layouts/Main/BlogList'
 
 export const TopTemplate = async () => {
   const data = await getBlogsApi()
