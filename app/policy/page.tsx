@@ -3,9 +3,11 @@
  */
 
 import React from 'react'
+/* components */
+import { PolicyTemplate } from '@/components/templates/PolicyTemplate'
 
 const PolicyPage = () => {
-  return <></>
+  return <PolicyTemplate />
 }
 
 export default PolicyPage
