@@ -1,3 +1,8 @@
+/**
+ * components/common/molecules/BlogItem.tsx
+ * @package components
+ */
+
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'

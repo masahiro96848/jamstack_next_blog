@@ -17,33 +17,30 @@ import { getBlogsContainCategoriesApi } from '@/apis/BlogApi'
  */
 type Props = {
   blogItem: BlogItemType
-  // categoryId: string
 }
 
 /**
  * TitleArea
  * @param {Props} props
- * @returns
  */
-
 export const TitleArea: React.FC<Props> = (props: Props) => {
   /* props */
   const { blogItem } = props
 
-  // const data = getBlogsContainCategoriesApi(categoryId)
-
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>{blogItem.title}</h2>
-      <div className={styles.category}>
-        <div>
-          <Link href="">
-            <div className={styles.categoryItem}>Jest</div>
-          </Link>
-          <Link href="">
-            <div className={styles.categoryItem}>TypeScript</div>
-          </Link>
-        </div>
+      <div className={styles.categories}>
+        {blogItem.categories.map((category, index) => {
+          return (
+            <Link
+              href={`category/${category.id}`}
+              key={`${category.id}_${index}`}
+            >
+              <span className={styles.category}>{category.name}</span>
+            </Link>
+          )
+        })}
       </div>
       <div className={styles.date}>
         <DateArea />
