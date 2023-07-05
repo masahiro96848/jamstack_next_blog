@@ -11,12 +11,8 @@ export const Footer = () => {
           <li className={styles.list}>Top</li>
         </Link>
         <li className={styles.border}>|</li>
-        <Link href="/">
-          <li className={styles.list}>プライバシーポリシー</li>
-        </Link>
-        <li className={styles.border}>|</li>
-        <Link href="/">
-          <li className={styles.list}>免責事項</li>
+        <Link href="/policy">
+          <li className={styles.list}>免責事項・プライバシーポリシー</li>
         </Link>
       </ul>
 
