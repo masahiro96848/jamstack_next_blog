@@ -15,13 +15,13 @@ export const Header = () => {
             </div>
           </Link>
           <div className={styles.link}>
-            <Link href="">
+            <Link href="/">
               <h2>トップ</h2>
             </Link>
             <Link href="">
               <h2>このブログについて</h2>
             </Link>
-            <Link href="">
+            <Link href="/profile">
               <h2>プロフィール</h2>
             </Link>
           </div>
