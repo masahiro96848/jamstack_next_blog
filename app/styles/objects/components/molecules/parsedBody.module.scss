@@ -44,6 +44,45 @@
       sans-serif;
   }
 
+  h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+
+    @include mq(md) {
+      font-size: 1rem;
+    }
+  }
+
+  h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+
+    @include mq(md) {
+      font-size: 1rem;
+    }
+  }
+
+  h5 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+
+    @include mq(md) {
+      font-size: 1rem;
+    }
+  }
+
+  h6 {
+    font-weight: bold;
+    letter-spacing: 0.1em;
+
+    @include mq(md) {
+      font-size: 1rem;
+    }
+  }
+
   p {
     line-height: 1.8;
     margin: 20px 0 12px;
@@ -52,6 +91,64 @@
 
     @include mq(md) {
       font-size: 0.875rem;
+    }
+  }
+
+  ol {
+    position: relative;
+    counter-reset: my-counter;
+    padding: 20px 30px;
+    line-height: 2.4;
+
+    @include mq(md) {
+      font-size: 0.875rem;
+    }
+
+    // 擬似要素
+    // https://monochrome-design.jp/blog/572
+
+    &::before {
+      position: absolute;
+      content: '';
+      margin: 0 auto;
+      width: 99%;
+      min-height: 97%;
+      top: 3px;
+      left: 3px;
+    }
+
+    li {
+      position: relative;
+      font-weight: bold;
+      margin-left: 30px;
+    }
+  }
+
+  ul {
+    position: relative;
+    padding: 20px 30px;
+    line-height: 2.4;
+
+    @include mq(md) {
+      font-size: 0.875rem;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      margin: 0 auto;
+      width: 99%;
+      min-height: 97%;
+      top: 3px;
+      left: 3px;
+    }
+
+    li {
+      font-weight: bold;
+      margin-left: 30px;
+      position: relative;
+
+      //   https://saruwakakun.com/html-css/reference/change-before-after
     }
   }
 }
