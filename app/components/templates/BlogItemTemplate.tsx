@@ -12,7 +12,6 @@ import { ParsedBody } from '../common/molecules/ParsedBody'
 import { getBlogByApi } from '@/apis/BlogApi'
 /* styles */
 import styles from '@/styles/templates/blogItemTemplate.module.scss'
-import { BlogItemType } from '@/types/Blog'
 
 /**
  * Props
@@ -31,7 +30,7 @@ export const BlogItemTemplate: React.FC<Props> = async (props: Props) => {
   const blogItem = await getBlogByApi(blogId)
 
   return (
-    <BaseBlogPostLayout breadName="ブログ詳細">
+    <BaseBlogPostLayout breadName={blogItem.title}>
       <section className={styles.container}>
         <div className={styles.image}>
           <Image
