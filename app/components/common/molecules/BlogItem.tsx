@@ -15,7 +15,7 @@ export const BlogItem = (props: Props) => {
   const { blogItem } = props
 
   return (
-    <Link href={`${blogItem.id}`} prefetch={false}>
+    <Link href={`blog/${blogItem.id}`} prefetch={false}>
       <div className={styles.container}>
         <div className={styles.imageArea}>
           <Image
