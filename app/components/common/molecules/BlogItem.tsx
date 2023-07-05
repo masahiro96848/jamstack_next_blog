@@ -1,9 +1,14 @@
+/**
+ * components/common/molecules/BlogItem.tsx
+ * @package components
+ */
+
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
 /** styles */
-import styles from '@/styles/objects/components/blogItem.module.scss'
+import styles from '@/styles/objects/components/molecules/blogItem.module.scss'
 
 import { BlogItemType } from '@/types/Blog'
 
@@ -40,11 +45,6 @@ export const BlogItem = (props: Props) => {
               )
             })}
           </div>
-          {/* <div className={styles.categories}>
-            <span className={styles.category}>Jest</span>
-            <span className={styles.category}>TypeScript</span>
-            <span className={styles.category}>テストコード</span>
-          </div> */}
 
           <div className={styles.date}>
             <p>{blogItem.createdAt}</p>

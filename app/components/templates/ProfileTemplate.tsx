@@ -4,10 +4,10 @@
  */
 import React from 'react'
 import Image from 'next/image'
-import parse from 'html-react-parser'
 /* components */
 import { BaseBlogPostLayout } from '@/components/layouts/Main/BaseBlogPostLayout'
 import { PageTitle } from '@/components/common/atoms/PageTitle'
+import { ParsedBody } from '@/components/common/molecules/ParsedBody'
 /* apis */
 import { getProfileApi } from '@/apis/ProfileApi'
 /* styles */
@@ -18,24 +18,24 @@ export const ProfileTemplate: React.FC = async () => {
   const profile = profileData[0]
 
   return (
-    <BaseBlogPostLayout breadName="プロフィール">
-      {/* ページタイトル */}
-      <PageTitle title="Profile" />
-      <section className={styles.container}>
-        <div className={styles.image}>
-          <Image
-            src={profile.articleImage.url}
-            alt="Picture"
-            height={480}
-            width={800}
-          />
-        </div>
+    <>
+      <BaseBlogPostLayout breadName="プロフィール">
+        {/* ページタイトル */}
+        <PageTitle title="Profile" />
+        <section className={styles.container}>
+          <div className={styles.image}>
+            <Image
+              src={profile.articleImage.url}
+              alt="Picture"
+              height={480}
+              width={800}
+            />
+          </div>
 
-        <main className={styles.main}>
           {/* 記事本文 */}
-          <div className={styles.contents}>{parse(profile.body)}</div>
-        </main>
-      </section>
-    </BaseBlogPostLayout>
+          <ParsedBody body={profile.body} />
+        </section>
+      </BaseBlogPostLayout>
+    </>
   )
 }

@@ -21,27 +21,28 @@ type Props = {
 /**
  * TitleArea
  * @param {Props} props
- * @returns
  */
-
-export const TitleArea: React.FC = () => {
-  // const { blogItem } = props
+export const TitleArea: React.FC<Props> = (props: Props) => {
+  /* props */
+  const { blogItem } = props
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>ブログタイトル</h2>
-      <div className={styles.category}>
-        <div>
-          <Link href="">
-            <div className={styles.categoryItem}>Jest</div>
-          </Link>
-          <Link href="">
-            <div className={styles.categoryItem}>TypeScript</div>
-          </Link>
-        </div>
+      <h2 className={styles.title}>{blogItem.title}</h2>
+      <div className={styles.categories}>
+        {blogItem.categories.map((category, index) => {
+          return (
+            <Link
+              href={`category/${category.id}`}
+              key={`${category.id}_${index}`}
+            >
+              <span className={styles.category}>{category.name}</span>
+            </Link>
+          )
+        })}
       </div>
       <div className={styles.date}>
-        <DateArea />
+        <DateArea date={blogItem.createdAt} />
       </div>
     </div>
   )

@@ -1,0 +1,154 @@
+@import '@variable';
+
+.container {
+  width: 100%;
+  margin-bottom: 40px;
+
+  @include mq(md) {
+    margin-bottom: 0;
+  }
+
+  .image {
+    width: 100%;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+  }
+
+  .main {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.contents {
+  width: 100%;
+
+  h1 {
+    font-size: 24px;
+    background-color: #4c6bbd;
+    color: #ffffff;
+    padding: 10px 20px;
+    margin-top: 30px;
+    letter-spacing: 0.1em;
+    border-radius: 4px;
+  }
+
+  h2 {
+    font-size: 20px;
+    border-bottom: 1px solid black;
+    font-weight: bold;
+    margin: 30px 30px 30px 20px;
+
+    padding: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+      sans-serif;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+
+    @include mq(md) {
+      font-size: 1rem;
+    }
+  }
+
+  h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+
+    @include mq(md) {
+      font-size: 1rem;
+    }
+  }
+
+  h5 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+
+    @include mq(md) {
+      font-size: 1rem;
+    }
+  }
+
+  h6 {
+    font-weight: bold;
+    letter-spacing: 0.1em;
+
+    @include mq(md) {
+      font-size: 1rem;
+    }
+  }
+
+  p {
+    line-height: 1.8;
+    margin: 20px 0 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include mq(md) {
+      font-size: 0.875rem;
+    }
+  }
+
+  ol {
+    position: relative;
+    counter-reset: my-counter;
+    padding: 20px 30px;
+    line-height: 2.4;
+
+    @include mq(md) {
+      font-size: 0.875rem;
+    }
+
+    // 擬似要素
+    // https://monochrome-design.jp/blog/572
+
+    &::before {
+      position: absolute;
+      content: '';
+      margin: 0 auto;
+      width: 99%;
+      min-height: 97%;
+      top: 3px;
+      left: 3px;
+    }
+
+    li {
+      position: relative;
+      font-weight: bold;
+      margin-left: 30px;
+    }
+  }
+
+  ul {
+    position: relative;
+    padding: 20px 30px;
+    line-height: 2.4;
+
+    @include mq(md) {
+      font-size: 0.875rem;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      margin: 0 auto;
+      width: 99%;
+      min-height: 97%;
+      top: 3px;
+      left: 3px;
+    }
+
+    li {
+      font-weight: bold;
+      margin-left: 30px;
+      position: relative;
+
+      //   https://saruwakakun.com/html-css/reference/change-before-after
+    }
+  }
+}

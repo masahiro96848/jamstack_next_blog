@@ -1,3 +1,7 @@
+/**
+ * components/layouts/Aside/CategoryArea.tsx
+ * @package components
+ */
 import Link from 'next/link'
 import React from 'react'
 import { AsideSectionArea } from '@/components/layouts/Aside/AsideSectionArea'
