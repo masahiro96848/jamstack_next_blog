@@ -78,12 +78,10 @@ export const getBlogsContainArchiveMonthApi = async (
 /**
  * ブログ記事詳細取得
  */
-export const getBlogByApi = async (id: string, draftKey: string) => {
+export const getBlogByApi = async (id: string) => {
   let blogDetail = initBlogItem
   try {
-    const res = await globalAxios.get(
-      `${BASE_URL}${id}${draftKey !== '' ? `?draftKey=${draftKey}` : ''}`,
-    )
+    const res = await globalAxios.get(`${BASE_URL}${id}`)
     blogDetail = res.data
   } catch (error) {
     console.log(error)
