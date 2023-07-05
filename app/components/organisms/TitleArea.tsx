@@ -10,7 +10,6 @@ import { DateArea } from '../common/molecules/DateArea'
 
 import styles from '@/styles/objects/components/organisms/titleArea.module.scss'
 import { BlogItemType } from '@/types/Blog'
-import { getBlogsContainCategoriesApi } from '@/apis/BlogApi'
 
 /**
  * Props
@@ -43,7 +42,7 @@ export const TitleArea: React.FC<Props> = (props: Props) => {
         })}
       </div>
       <div className={styles.date}>
-        <DateArea />
+        <DateArea date={blogItem.createdAt} />
       </div>
     </div>
   )
