@@ -36,8 +36,8 @@ export const BlogItemTemplate: React.FC<Props> = async (props: Props) => {
           <Image
             src={blogItem.image.url}
             alt="picture"
-            height={450}
-            width={850}
+            height={blogItem.image.height}
+            width={blogItem.image.width}
           />
         </div>
         <main className={styles.main}>

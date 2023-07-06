@@ -10,6 +10,10 @@
   font-weight: bold;
   line-height: 3rem;
   letter-spacing: 0.1em;
+
+  @include mq(md) {
+    font-size: 1.1rem;
+  }
 }
 
 .categories {
@@ -46,7 +50,7 @@
   }
 
   @include mq(md) {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     line-height: 1.5rem;
     padding: 0px 8px;
   }
