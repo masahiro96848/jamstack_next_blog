@@ -5,6 +5,8 @@
 
 import React from 'react'
 import { AiOutlineClockCircle } from 'react-icons/ai'
+/* logic */
+import { changeYearMonthDateLogic } from '@/logic/DateLogic'
 /* styles */
 import styles from '@/styles/objects/components/molecules/dateArea.module.scss'
 
@@ -23,7 +25,7 @@ export const DateArea: React.FC<Props> = (props: Props) => {
       <div className={styles.icon}>
         <AiOutlineClockCircle size={size} />
       </div>
-      <p className={styles.date}>{date}</p>
+      <p className={styles.date}>{changeYearMonthDateLogic(date)}</p>
     </div>
   )
 }
