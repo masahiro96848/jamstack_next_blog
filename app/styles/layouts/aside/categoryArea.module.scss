@@ -1,7 +1,8 @@
 @import '@variable';
 
 .container {
-  border: 1px solid black;
+  border: 1px solid rgb(131, 131, 131);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   height: 300px;
   word-break: break-all;
   padding: 20px 20px;
@@ -13,9 +14,41 @@
 }
 
 .list {
-  border: 1px solid gray;
-  border-radius: 10px;
-  padding: 5px 10px;
-  margin-bottom: 20px;
-  margin-right: 15px;
+  // border: 1px solid gray;
+  // border-radius: 10px;
+  // padding: 5px 10px;
+  // margin-bottom: 20px;
+  // margin-right: 15px;
+}
+
+.category {
+  cursor: pointer;
+  margin-right: 16px;
+  padding: 4px 12px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.1em;
+  color: #000000;
+  border: 2px solid #000000;
+  border-radius: 50px;
+  margin-bottom: 16px;
+
+  &:hover {
+    color: #fff;
+    background: #000000;
+    transition: background 1s;
+  }
+
+  @include mq(lg) {
+    font-size: 1rem;
+    border: 2px solid var(--c-point);
+    border-radius: 8px;
+    padding: 10px 16px;
+  }
+
+  @include mq(md) {
+    font-size: 0.75rem;
+    line-height: 1.5rem;
+    padding: 0px 8px;
+  }
 }

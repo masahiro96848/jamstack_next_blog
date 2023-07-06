@@ -11,6 +11,7 @@ import React from 'react'
 import styles from '@/styles/objects/components/molecules/blogItem.module.scss'
 
 import { BlogItemType } from '@/types/Blog'
+import { DateArea } from '@/components/common/molecules/DateArea'
 
 type Props = {
   blogItem: BlogItemType
@@ -47,7 +48,7 @@ export const BlogItem = (props: Props) => {
           </div>
 
           <div className={styles.date}>
-            <p>{blogItem.createdAt}</p>
+            <DateArea date={blogItem.createdAt} />
           </div>
         </div>
       </div>
