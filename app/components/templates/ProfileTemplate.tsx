@@ -27,8 +27,8 @@ export const ProfileTemplate: React.FC = async () => {
             <Image
               src={profile.articleImage.url}
               alt="Picture"
-              height={480}
-              width={800}
+              height={profile.articleImage.height}
+              width={profile.articleImage.width}
             />
           </div>
 
