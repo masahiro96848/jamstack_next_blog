@@ -85,7 +85,7 @@ export const getBlogByApi = async (id: string) => {
     blogDetail = res.data
   } catch (error) {
     console.log(error)
-    throw new Error(`API ERROR: getBlogByApi`)
+    // throw new Error(`API ERROR: getBlogByApi`)
   }
 
   return blogDetail
