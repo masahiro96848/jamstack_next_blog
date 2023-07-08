@@ -1,0 +1,52 @@
+@import '@variable';
+
+.container {
+  width: 100%;
+  margin-bottom: 40px;
+
+  @include mq(md) {
+    margin-bottom: 0;
+  }
+}
+
+.error {
+  margin: 30px auto 80px;
+  width: 70%;
+
+  @include mq(md) {
+    width: 90%;
+  }
+}
+
+.title {
+  color: var(--c-title);
+  text-align: center;
+
+  h1 {
+    font-size: 3rem;
+    line-height: 72px;
+    letter-spacing: 0.1em;
+
+    @include mq(md) {
+      font-size: 2.125rem;
+      line-height: 36px;
+    }
+  }
+
+  h2 {
+    margin-top: 36px;
+    font-size: 1.5rem;
+    line-height: 36px;
+    letter-spacing: 0.1em;
+
+    @include mq(lg) {
+      font-size: 1.25rem;
+    }
+
+    @include mq(md) {
+      margin-top: 10px;
+      font-size: 0.5rem;
+      line-height: 18px;
+    }
+  }
+}

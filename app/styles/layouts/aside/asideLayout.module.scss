@@ -20,6 +20,11 @@
   margin-top: 45px;
   margin-bottom: 100px;
 
+  @include mq(xl) {
+    width: 100%;
+    margin-top: 0px;
+  }
+
   @include mq(lg) {
     width: 100%;
     margin-top: 0px;
