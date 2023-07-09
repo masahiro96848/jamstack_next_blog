@@ -18,7 +18,7 @@ export const ArchiveArea = () => {
 
   return (
     <>
-      <AsideSectionArea title="アーカイブ">
+      {/* <AsideSectionArea title="アーカイブ">
         <div className={styles.container}>
           <ul className={styles.lists}>
             {archives.map((archive, index) => {
@@ -34,7 +34,7 @@ export const ArchiveArea = () => {
             })}
           </ul>
         </div>
-      </AsideSectionArea>
+      </AsideSectionArea> */}
     </>
   )
 }
