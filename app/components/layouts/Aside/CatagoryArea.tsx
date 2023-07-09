@@ -1,13 +1,20 @@
 /**
- * components/layouts/Aside/CategoryArea.tsx
+ * components/layouts/Aside/CategoryArea
  * @package components
  */
 import Link from 'next/link'
 import React from 'react'
+/* components */
 import { AsideSectionArea } from '@/components/layouts/Aside/AsideSectionArea'
+/* apis */
 import { getCategoriesApi } from '@/apis/CategoryApi'
+/* styles */
 import styles from '@/styles/layouts/aside/categoryArea.module.scss'
 
+/**
+ * CategoryArea
+ * @returns
+ */
 export const CategoryArea = async () => {
   const data = await getCategoriesApi()
   const categories = data

@@ -1,6 +1,6 @@
 /**
- * pages/CategoryTemplate
- * @package component
+ * templates/CategoryTemplate
+ * @package Components
  */
 import React from 'react'
 /* components */
@@ -24,8 +24,11 @@ type Props = {
 
 /**
  * CategoryTemplate
+ * @param {Props}props
+ * @returns
  */
 export const CategoryTemplate = async (props: Props) => {
+  /* props */
   const { categoryId } = props
   let blogList: BlogItemType[] = []
 

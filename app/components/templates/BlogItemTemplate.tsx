@@ -1,6 +1,6 @@
 /**
  * templates/BlogItemTemplate
- * @package
+ * @package Components
  */
 import React from 'react'
 import Image from 'next/image'
@@ -26,7 +26,9 @@ type Props = {
  * @returns
  */
 export const BlogItemTemplate: React.FC<Props> = async (props: Props) => {
+  /* props */
   const { blogId } = props
+  /* api */
   const blogItem = await getBlogByApi(blogId)
 
   return (

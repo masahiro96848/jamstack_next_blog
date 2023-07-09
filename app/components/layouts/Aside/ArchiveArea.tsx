@@ -1,8 +1,18 @@
+/**
+ * layouts/Aside/ArchiveArea
+ * @package Components
+ */
 import Link from 'next/link'
 import React from 'react'
+/* components */
 import { AsideSectionArea } from '@/components/layouts/Aside/AsideSectionArea'
+/* styles */
 import styles from '@/styles/layouts/aside/archiveArea.module.scss'
 
+/**
+ * ArchiveArea
+ * @returns
+ */
 export const ArchiveArea = () => {
   const archives = ['> 2023年8月', '> 2023年7月', '> 2023年6月']
 

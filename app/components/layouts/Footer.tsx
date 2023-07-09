@@ -1,8 +1,16 @@
+/**
+ * layouts/Main/Footer
+ * @package Components
+ */
 import Link from 'next/link'
 import React from 'react'
-
+/* styles */
 import styles from '@/styles/modules/footer.module.scss'
 
+/**
+ * Footer
+ * @returns
+ */
 export const Footer = () => {
   return (
     <div className={styles.container}>

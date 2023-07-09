@@ -1,6 +1,6 @@
 /**
- * templtes/ProfileTemplate
- * @package Component
+ * templates/ProfileTemplate
+ * @package Components
  */
 import React from 'react'
 import Image from 'next/image'
@@ -13,7 +13,12 @@ import { getProfileApi } from '@/apis/ProfileApi'
 /* styles */
 import styles from '@/styles/templates/profileTemplate.module.scss'
 
+/**
+ * ProfileTemplate
+ * @returns
+ */
 export const ProfileTemplate: React.FC = async () => {
+  /* api */
   const profileData = await getProfileApi()
   const profile = profileData[0]
 

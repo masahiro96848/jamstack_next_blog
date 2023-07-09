@@ -1,11 +1,17 @@
 /**
- * Blog API
+ * BlogApi
+ * @package apis
  */
-
+/* config */
 import globalAxios from '@/config/globalAxios'
+/* constants */
 import { initBlogData, initBlogItem } from '@/constants/initState'
+/* types */
 import { BlogDataType } from '@/types/Blog'
 
+/**
+ * constant
+ */
 const BASE_URL = `${
   process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000/'
 }/blogs/`

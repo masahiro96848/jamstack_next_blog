@@ -1,12 +1,14 @@
 /**
- * layouts/main/BaseLayout.tsx
- * @package component
+ * layouts/Main/BaseLayout
+ * @package Components
  */
 
 import React from 'react'
+/* components */
+import { Header } from '@/components/layouts/Header'
 import { Footer } from '@/components//layouts/Footer'
 import { BreadcrumbList } from '@/components/layouts/Main/BreadcrumbList'
-import { Header } from '@/components/layouts/Header'
+/* styles */
 import styles from '@/styles/modules/baseLayout.module.scss'
 
 /**
@@ -17,6 +19,11 @@ export type Props = {
   breadName?: string
 }
 
+/**
+ * BaseLayout
+ * @param {Props} props
+ * @returns
+ */
 export const BaseLayout: React.FC<Props> = (props: Props) => {
   /* props */
   const { children, breadName } = props

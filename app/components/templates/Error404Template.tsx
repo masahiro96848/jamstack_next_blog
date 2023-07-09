@@ -8,6 +8,10 @@ import { BaseBlogPostLayout } from '@/components/layouts/Main/BaseBlogPostLayout
 /* styles */
 import styles from '@/styles/templates/error404Template.module.scss'
 
+/**
+ * Error404Template
+ * @returns
+ */
 export const Error404Template: React.FC = async () => {
   return (
     <BaseBlogPostLayout breadName="">
