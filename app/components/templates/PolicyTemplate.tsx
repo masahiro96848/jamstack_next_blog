@@ -1,6 +1,6 @@
 /**
  * templates/PolicyTemplate
- * @package Component
+ * @package Components
  */
 import React from 'react'
 /* components */
@@ -9,6 +9,10 @@ import { PageTitle } from '@/components/common/atoms/PageTitle'
 /* styles */
 import styles from '@/styles/templates/policyTemplate.module.scss'
 
+/**
+ * PolicyTemplate
+ * @returns
+ */
 export const PolicyTemplate: React.FC = async () => {
   return (
     <BaseBlogPostLayout breadName="免責事項・プライバシーポリシー">

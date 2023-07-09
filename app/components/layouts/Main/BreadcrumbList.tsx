@@ -1,5 +1,6 @@
 /**
- * layouts/BreadcrumbList
+ * layouts/Main/BreadcrumbList
+ * @package component
  */
 import React from 'react'
 import Link from 'next/link'
@@ -15,6 +16,8 @@ type Props = {
 
 /**
  * BreadcrumbList
+ * @param {Props} props
+ * @returns
  */
 export const BreadcrumbList: React.FC<Props> = (props: Props) => {
   /* props */

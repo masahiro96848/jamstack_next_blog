@@ -1,12 +1,11 @@
 /**
  * common/molecules/DateArea
- * @package Component
+ * @package Components
  */
 
 import React from 'react'
 import { AiOutlineClockCircle } from 'react-icons/ai'
 import { BsArrowClockwise } from 'react-icons/bs'
-
 /* logic */
 import { changeYearMonthDateLogic } from '@/logic/DateLogic'
 /* styles */
@@ -20,8 +19,15 @@ type Props = {
   size?: number
 }
 
+/**
+ *
+ * @param {Props} props
+ * @returns
+ */
 export const DateArea: React.FC<Props> = (props: Props) => {
+  /* props */
   const { date, size } = props
+
   return (
     <div className={styles.container}>
       <div className={styles.createdIcon}>

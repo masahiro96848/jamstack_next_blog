@@ -1,9 +1,19 @@
+/**
+ * layouts/Aside/AsideLayout
+ * @package Components
+ */
 import React from 'react'
+/* components */
 import { ArchiveArea } from '@/components/layouts/Aside/ArchiveArea'
 import { CategoryArea } from '@/components/layouts/Aside/CatagoryArea'
 import { ProfileArea } from '@/components/layouts/Aside/ProfileArea'
+/* styles */
 import styles from '@/styles/layouts/aside/asideLayout.module.scss'
 
+/**
+ * AsideLayout
+ * @returns
+ */
 export const AsideLayout = () => {
   return (
     <>

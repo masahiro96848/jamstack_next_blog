@@ -1,9 +1,19 @@
+/**
+ * layouts/Aside/ProfileArea
+ * @package Components
+ */
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+/* components */
 import { AsideSectionArea } from '@/components/layouts/Aside/AsideSectionArea'
+/* styles */
 import styles from '@/styles/layouts/aside/profileArea.module.scss'
 
+/**
+ * ProfileArea
+ * @returns
+ */
 export const ProfileArea = () => {
   return (
     <>

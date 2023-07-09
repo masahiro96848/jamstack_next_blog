@@ -1,6 +1,6 @@
 /**
  * templates/ArchiveTemplate
- * @package components
+ * @package Components
  */
 import React from 'react'
 /* components */

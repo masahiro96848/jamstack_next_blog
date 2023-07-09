@@ -1,9 +1,18 @@
+/**
+ * layouts/Main/Header
+ * @package Components
+ */
 import Link from 'next/link'
 import React from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { BsSearch } from 'react-icons/bs'
+/* styles */
 import styles from '@/styles/modules/header.module.scss'
 
+/**
+ * Header
+ * @returns
+ */
 export const Header = () => {
   return (
     <div className={styles.container}>

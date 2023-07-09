@@ -1,23 +1,31 @@
 /**
- * components/common/molecules/BlogItem.tsx
- * @package components
+ * common/molecules/BlogItem
+ * @package Components
  */
-
-import Image from 'next/image'
-import Link from 'next/link'
 import React from 'react'
-
+import Link from 'next/link'
+import Image from 'next/image'
+/* components */
+import { DateArea } from '@/components/common/molecules/DateArea'
+/* types */
+import { BlogItemType } from '@/types/Blog'
 /** styles */
 import styles from '@/styles/objects/components/molecules/blogItem.module.scss'
 
-import { BlogItemType } from '@/types/Blog'
-import { DateArea } from '@/components/common/molecules/DateArea'
-
+/**
+ * props
+ */
 type Props = {
   blogItem: BlogItemType
 }
 
+/**
+ *
+ * @param {Props}props
+ * @returns
+ */
 export const BlogItem = (props: Props) => {
+  /* props */
   const { blogItem } = props
 
   return (

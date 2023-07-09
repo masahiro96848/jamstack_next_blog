@@ -1,4 +1,9 @@
+/**
+ * layouts/Aside/AsideSectionArea
+ * @package Components
+ */
 import React from 'react'
+/* styles */
 import styles from '@/styles/layouts/aside/asideSectionArea.module.scss'
 
 type Props = {
@@ -12,6 +17,7 @@ type Props = {
  * @returns
  */
 export const AsideSectionArea = (props: Props) => {
+  /* props */
   const { children, title } = props
 
   return (
