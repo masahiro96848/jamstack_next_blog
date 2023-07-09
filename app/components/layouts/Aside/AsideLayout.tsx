@@ -1,3 +1,4 @@
+'use client'
 /**
  * layouts/Aside/AsideLayout
  * @package Components
@@ -16,12 +17,26 @@ import styles from '@/styles/layouts/aside/asideLayout.module.scss'
  * @returns
  */
 export const AsideLayout = () => {
+  // アラート
+  const alertModal = () => {
+    alert('Coming Soon....')
+  }
+
+  const hadnleInputText = (event: any) => {
+    console.log(event.target.value)
+  }
+
   return (
     <>
       <aside className={styles.aside}>
         {/* 検索エリア */}
         <div>
-          <InputForm />
+          <InputForm
+            text=""
+            placeholder="キーワード検索"
+            onClick={alertModal}
+            onChange={hadnleInputText}
+          />
         </div>
         {/* プロフィール */}
         <div className={styles.profile}>
