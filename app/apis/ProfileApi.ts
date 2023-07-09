@@ -1,11 +1,10 @@
 /**
- * ProfileApi.ts
- * プロフィールAPI
+ * ProfileApi
  * @package apis
  */
 /* config */
 import globalAxios from '@/config/globalAxios'
-
+/* constants */
 import { initProfileState } from '@/constants/initState'
 /* types */
 import { ProfileType } from '@/types/Profile'

@@ -1,5 +1,5 @@
 /**
- * CategoryApi.ts
+ * CategoryApi
  * @param apis
  */
 /* config */
