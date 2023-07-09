@@ -4,6 +4,7 @@
  */
 import React from 'react'
 /* components */
+import { InputForm } from '@/components/common/atoms/InputForm'
 import { ArchiveArea } from '@/components/layouts/Aside/ArchiveArea'
 import { CategoryArea } from '@/components/layouts/Aside/CatagoryArea'
 import { ProfileArea } from '@/components/layouts/Aside/ProfileArea'
@@ -20,7 +21,7 @@ export const AsideLayout = () => {
       <aside className={styles.aside}>
         {/* 検索エリア */}
         <div>
-          <input type="text" placeholder="検索" className={styles.search} />
+          <InputForm />
         </div>
         {/* プロフィール */}
         <div className={styles.profile}>
