@@ -26,3 +26,12 @@ export interface BlogItemType {
 export interface BlogDataType {
   blogList: BlogItemType[]
 }
+
+/**
+ * TableOfContentsType
+ */
+export interface TableOfContentsType {
+  id: string
+  text: string
+  name: string
+}
