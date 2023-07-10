@@ -1,6 +1,7 @@
-# ZEROne IT技術ブログ
+# ZEROne IT 技術ブログ
 
 ## 機能
+
 - ブログ記事一覧
 - カテゴリー絞り込みブログ記事一覧
 - パンくずリスト
@@ -9,6 +10,7 @@
 - プライバシーポリシー
 
 ## 技術構成
+
 - React18
 - Next.js13(App Router)
 - microCMS(コンテンツ管理)
@@ -20,56 +22,62 @@
 - Jest
 - Github Actions
 
-## microCMSのスキーマ設定
+## microCMS のスキーマ設定
+
 ### Blog
+
 endpoint: blogs  
 type: リスト形式
 
-| フィールドID  | 表示名 |  種類 |
-| ------------- | ------------- | ------------- |
-| title  | タイトル  |  テキストフィールド |
-| body | 内容  | リッチエディタ  |
-| image | 画像  | 画像  |
-| description | ブログ記事の説明  | テキストフィールド  |
-| categories | カテゴリー  | 複数コンテンツ参照 - カテゴリー  |  
+| フィールド ID | 表示名           | 種類                            |
+| ------------- | ---------------- | ------------------------------- |
+| title         | タイトル         | テキストフィールド              |
+| body          | 内容             | リッチエディタ                  |
+| image         | 画像             | 画像                            |
+| description   | ブログ記事の説明 | テキストフィールド              |
+| categories    | カテゴリー       | 複数コンテンツ参照 - カテゴリー |
 
 ### Category
+
 endpoint: profile
 type: リスト形式
 
-| フィールドID  | 表示名 |  種類 |
-| ------------- | ------------- | ------------- |
-| name  | カテゴリー名  |  テキストフィールド |　　
+| フィールド ID | 表示名       | 種類               |
+| ------------- | ------------ | ------------------ | ---- |
+| name          | カテゴリー名 | テキストフィールド | 　　 |
 
 ### Profile
+
 endpoint: profile  
 type: リスト形式
 
-| フィールドID  | 表示名 |  種類 |
-| ------------- | ------------- | ------------- |
-| name  | ユーザー名  |  テキストフィールド |
-|  englishName | 英字ユーザー名  | テキストフィールド  |
-|  position | 役割  | テキストフィールド  |
-|  introduction | 自己紹介文  | テキストエリア  |
-|  userImage | ユーザー画像  | 画像  |  
-|  articleImage | 記事画像  | 画像  |  
-|  description | プロフィール紹介文  | テキストフィールド  |  
-|  body | 本文  | リッチエディタ  |    
-
+| フィールド ID | 表示名             | 種類               |
+| ------------- | ------------------ | ------------------ |
+| name          | ユーザー名         | テキストフィールド |
+| englishName   | 英字ユーザー名     | テキストフィールド |
+| position      | 役割               | テキストフィールド |
+| introduction  | 自己紹介文         | テキストエリア     |
+| userImage     | ユーザー画像       | 画像               |
+| articleImage  | 記事画像           | 画像               |
+| description   | プロフィール紹介文 | テキストフィールド |
+| body          | 本文               | リッチエディタ     |
 
 # 環境変数
-プロジェクトルートに.envファイルを作成して、以下の項目を設定してください。
-- X_MICROCMS_API_KEY(microCMSのAPIキー)
-- NEXT_PUBLIC_BASE_URL(microCMSのAPIベースのURL)
+
+プロジェクトルートに.env ファイルを作成して、以下の項目を設定してください。
+
+- X_MICROCMS_API_KEY(microCMS の API キー)
+- NEXT_PUBLIC_BASE_URL(microCMS の API ベースの URL)
 
 例)
+
 ```
 X_MICROCMS_API_KEY=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 NEXT_PUBLIC_BASE_URL=https://xxxxxx.microcms.io/api/v1
 ```
 
-
 # 開発方法
+
 ```
 # パッケージをインストール
 $ npm i
@@ -89,4 +97,3 @@ $ npm run storybook
 # 単体テストを実行
 $ npm run test
 ```
-
