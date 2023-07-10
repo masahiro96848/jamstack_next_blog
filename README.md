@@ -18,7 +18,7 @@
 - ESLint
 - Prettier
 - CSS Modules
-- Storybook
+- Storybook7.0.17
 - Jest
 - Github Actions
 
@@ -39,12 +39,12 @@ type: リスト形式
 
 ### Category
 
-endpoint: profile
+endpoint: profile  
 type: リスト形式
 
 | フィールド ID | 表示名       | 種類               |
-| ------------- | ------------ | ------------------ | ---- |
-| name          | カテゴリー名 | テキストフィールド | 　　 |
+| ------------- | ------------ | ------------------ |
+| name          | カテゴリー名 | テキストフィールド |
 
 ### Profile
 
