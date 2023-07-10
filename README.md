@@ -1,34 +1,92 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# ZEROne IT技術ブログ
 
-## Getting Started
+## 機能
+- ブログ記事一覧
+- カテゴリー絞り込みブログ記事一覧
+- パンくずリスト
+- ブログ記事詳細
+- プロフィール
+- プライバシーポリシー
 
-First, run the development server:
+## 技術構成
+- React18
+- Next.js13(App Router)
+- microCMS(コンテンツ管理)
+- TypeScript5.1.5
+- ESLint
+- Prettier
+- CSS Modules
+- Storybook
+- Jest
+- Github Actions
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+## microCMSのスキーマ設定
+### Blog
+endpoint: blogs  
+type: リスト形式
+
+| フィールドID  | 表示名 |  種類 |
+| ------------- | ------------- | ------------- |
+| title  | タイトル  |  テキストフィールド |
+| body | 内容  | リッチエディタ  |
+| image | 画像  | 画像  |
+| description | ブログ記事の説明  | テキストフィールド  |
+| categories | カテゴリー  | 複数コンテンツ参照 - カテゴリー  |  
+
+### Category
+endpoint: profile
+type: リスト形式
+
+| フィールドID  | 表示名 |  種類 |
+| ------------- | ------------- | ------------- |
+| name  | カテゴリー名  |  テキストフィールド |　　
+
+### Profile
+endpoint: profile  
+type: リスト形式
+
+| フィールドID  | 表示名 |  種類 |
+| ------------- | ------------- | ------------- |
+| name  | ユーザー名  |  テキストフィールド |
+|  englishName | 英字ユーザー名  | テキストフィールド  |
+|  position | 役割  | テキストフィールド  |
+|  introduction | 自己紹介文  | テキストエリア  |
+|  userImage | ユーザー画像  | 画像  |  
+|  articleImage | 記事画像  | 画像  |  
+|  description | プロフィール紹介文  | テキストフィールド  |  
+|  body | 本文  | リッチエディタ  |    
+
+
+# 環境変数
+プロジェクトルートに.envファイルを作成して、以下の項目を設定してください。
+- X_MICROCMS_API_KEY(microCMSのAPIキー)
+- NEXT_PUBLIC_BASE_URL(microCMSのAPIベースのURL)
+
+例)
+```
+X_MICROCMS_API_KEY=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+NEXT_PUBLIC_BASE_URL=https://xxxxxx.microcms.io/api/v1
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# 開発方法
+```
+# パッケージをインストール
+$ npm i
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# 開発サーバーを起動(localhost:3000)
+$ npm run dev
 
-## Learn More
+# 静的サイトを生成
+$ npm run build
 
-To learn more about Next.js, take a look at the following resources:
+# 静的サイトを起動(localhost:3000)
+$ npm run start
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# storybookを起動
+$ npm run storybook
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# 単体テストを実行
+$ npm run test
+```
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
