@@ -11,7 +11,7 @@ import styles from '@/styles/objects/components/atoms/inputForm.module.scss'
 /**
  * Props
  */
-export type Props = {
+export type InputFormProps = {
   text: string
   placeholder: string
   onClick?: () => void
@@ -20,8 +20,10 @@ export type Props = {
 
 /**
  * InputForm
+ * @param {InputFormProps} props
+ * @returns
  */
-export const InputForm: React.FC<Props> = (props: Props) => {
+export const InputForm: React.FC<InputFormProps> = (props: InputFormProps) => {
   /* props */
   const { text, placeholder, onClick, onChange } = props
 
