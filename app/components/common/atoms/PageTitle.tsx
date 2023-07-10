@@ -9,7 +9,7 @@ import styles from '@/styles/objects/components/atoms/pageTitle.module.scss'
 /**
  * Props
  */
-type PageTitleProps = {
+export type PageTitleProps = {
   title: string
 }
 
