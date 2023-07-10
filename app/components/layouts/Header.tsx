@@ -27,7 +27,7 @@ export const Header = () => {
             <Link href="/">
               <h2>トップ</h2>
             </Link>
-            <Link href="">
+            <Link href="/intro">
               <h2>このブログについて</h2>
             </Link>
             <Link href="/profile">
