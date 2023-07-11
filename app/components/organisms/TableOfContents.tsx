@@ -13,15 +13,15 @@ import styles from '@/styles/objects/components/organisms/tableOfContents.module
  * Props
  */
 type Props = {
-  tableOfContents: TableOfContentsType[]
+  // tableOfContents: TableOfContentsType[]
 }
 
 export const TableOfContents: React.FC<Props> = (props: Props) => {
   /* props */
-  const { tableOfContents } = props
+  // const { tableOfContents } = props
   return (
     <>
-      {tableOfContents.length > 0 && (
+      {/* {tableOfContents.length > 0 && (
         <div className={styles.container} id="create-table-of-contents">
           <h4>目次</h4>
           {tableOfContents.map((toc) => {
@@ -35,7 +35,7 @@ export const TableOfContents: React.FC<Props> = (props: Props) => {
             )
           })}
         </div>
-      )}
+      )} */}
     </>
   )
 }

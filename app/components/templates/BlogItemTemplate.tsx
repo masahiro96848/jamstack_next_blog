@@ -10,14 +10,18 @@ import { TitleArea } from '@/components/organisms/TitleArea'
 import { ParsedBody } from '../common/molecules/ParsedBody'
 /* api */
 import { getBlogByApi } from '@/apis/BlogApi'
+/* types */
+import { TableOfContentsType } from '@/types/Blog'
 /* styles */
 import styles from '@/styles/templates/blogItemTemplate.module.scss'
+import { TableOfContents } from '../organisms/TableOfContents'
 
 /**
  * Props
  */
 type Props = {
   blogId: string
+  // tableOfContents: TableOfContentsType[]
 }
 
 /**
@@ -46,7 +50,7 @@ export const BlogItemTemplate: React.FC<Props> = async (props: Props) => {
           {/* ブログタイトルエリア */}
           <TitleArea blogItem={blogItem} />
           {/* 目次 */}
-
+          {/* <TableOfContents tableOfContents={tableOfContents} /> */}
           {/* 記事本文 */}
           <ParsedBody body={blogItem.body} />
         </main>
