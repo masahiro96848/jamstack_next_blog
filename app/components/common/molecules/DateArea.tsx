@@ -15,7 +15,8 @@ import styles from '@/styles/objects/components/molecules/dateArea.module.scss'
  * Props
  */
 type Props = {
-  date: string
+  createdAt: string
+  updatedAt: string
   size?: number
 }
 
@@ -26,18 +27,18 @@ type Props = {
  */
 export const DateArea: React.FC<Props> = (props: Props) => {
   /* props */
-  const { date, size } = props
+  const { createdAt, updatedAt, size } = props
 
   return (
     <div className={styles.container}>
       <div className={styles.createdIcon}>
         <AiOutlineClockCircle size={size} />
       </div>
-      <p className={styles.date}>{changeYearMonthDateLogic(date)}</p>
+      <p className={styles.date}>{changeYearMonthDateLogic(createdAt)}</p>
       <div className={styles.updatedIcon}>
         <BsArrowClockwise size={size} />
       </div>
-      <p className={styles.date}>2022-04-22</p>
+      <p className={styles.date}>{changeYearMonthDateLogic(updatedAt)}</p>
     </div>
   )
 }

@@ -42,7 +42,10 @@ export const TitleArea: React.FC<Props> = (props: Props) => {
         })}
       </div>
       <div className={styles.date}>
-        <DateArea date={blogItem.createdAt} />
+        <DateArea
+          createdAt={blogItem.createdAt}
+          updatedAt={blogItem.updatedAt}
+        />
       </div>
     </div>
   )

@@ -4,6 +4,7 @@
  */
 import React from 'react'
 import Image from 'next/image'
+import * as cheerio from 'cheerio'
 /* components */
 import { BaseBlogPostLayout } from '@/components/layouts/Main/BaseBlogPostLayout'
 import { TitleArea } from '@/components/organisms/TitleArea'
@@ -12,6 +13,7 @@ import { ParsedBody } from '../common/molecules/ParsedBody'
 import { getBlogByApi } from '@/apis/BlogApi'
 /* styles */
 import styles from '@/styles/templates/blogItemTemplate.module.scss'
+import { TableOfContents } from '../organisms/TableOfContents'
 
 /**
  * Props
@@ -31,6 +33,15 @@ export const BlogItemTemplate: React.FC<Props> = async (props: Props) => {
   /* api */
   const blogItem = await getBlogByApi(blogId)
 
+  const $ = cheerio.load(blogItem.body)
+  const headings = $('h1, h2, h3').toArray()
+  const tableOfContents = headings.map((data) => ({
+    //@ts-ignore
+    text: data.children[0].data,
+    id: data.attribs.id,
+    name: data.name,
+  }))
+
   return (
     <BaseBlogPostLayout breadName={blogItem.title}>
       <section className={styles.container}>
@@ -46,7 +57,7 @@ export const BlogItemTemplate: React.FC<Props> = async (props: Props) => {
           {/* ブログタイトルエリア */}
           <TitleArea blogItem={blogItem} />
           {/* 目次 */}
-
+          <TableOfContents tableOfContents={tableOfContents} />
           {/* 記事本文 */}
           <ParsedBody body={blogItem.body} />
         </main>
