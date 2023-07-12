@@ -3,6 +3,7 @@
 .container {
   background: var(--c-sub);
   padding: 20px;
+  margin-top: 40px;
   margin-bottom: 40px;
   border-radius: 8px;
   color: var(--c-text);
@@ -10,6 +11,7 @@
 
   @include mq(md) {
     padding: 12px 20px;
+    margin-top: 20px;
     margin-bottom: 20px;
   }
 
@@ -33,20 +35,27 @@
       padding: 6px 0;
     }
 
-    &::before {
-      content: '-';
-      margin-right: 10px;
-      color: #cacae7;
-    }
-    &:hover {
-      opacity: 0.7;
-    }
+    // &::before {
+    //   content: '-';
+    //   margin-right: 10px;
+    //   color: #cacae7;
+    // }
+    // &:hover {
+    //   opacity: 0.7;
+    // }
   }
 }
 
 .list {
   &__h1 {
     font-size: 1rem;
+    margin: 16px 0px 16px 14px;
+    word-break: break-all;
+    text-indent: -0.9rem;
+    a:hover {
+      color: #331cbf;
+      text-decoration: underline;
+    }
 
     @include mq(md) {
       font-size: 0.875rem;
@@ -55,10 +64,25 @@
 
   &__h2 {
     font-size: 0.875rem;
-    margin-left: 16px;
+    margin-bottom: 10px;
+    padding-left: 2.7rem;
+    list-style-type: none;
+    word-break: break-all;
+    text-indent: -0.9rem;
+    a:hover {
+      color: #331cbf;
+      text-decoration: underline;
+    }
+    &::before {
+      content: '-';
+      margin-right: 10px;
+      color: #000000;
+    }
 
     @include mq(md) {
       font-size: 0.75rem;
+      padding-left: 2.5rem;
+      text-indent: -1rem;
     }
   }
 }

@@ -31,7 +31,7 @@ export const TableOfContents: React.FC<Props> = (props: Props) => {
 
             return (
               <li className={listStyle} id={'list' + toc.name} key={toc.id}>
-                <AnchorLink offset="140" href={'#' + toc.id}>
+                <AnchorLink offset="130" href={'#' + toc.id}>
                   {toc.text}
                 </AnchorLink>
               </li>
