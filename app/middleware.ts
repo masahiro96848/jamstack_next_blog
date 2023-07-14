@@ -5,7 +5,7 @@ import { NextRequest, NextResponse } from 'next/server'
  */
 
 export const config = {
-  matcher: ['/:path*', '/index/:path*'],
+  matcher: '/',
 }
 
 export function middleware(req: NextRequest) {
