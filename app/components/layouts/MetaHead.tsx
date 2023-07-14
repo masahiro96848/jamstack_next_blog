@@ -27,13 +27,13 @@ export const MetaHead = (props: Props) => {
       <title>{metaData.title}</title>
       <meta property="og:title" content={metaData.title} />
       <meta property="og:description" content={metaData.description} />
-      <meta name="keywords" content={metaData.keyword} />
+      {/* <meta name="keywords" content={metaData.keyword} />
       <meta property="og:type" content="blog" />
       <meta property="og:url" content={metaData.url} />
       <meta property="og:image" content={metaData.image} />
       <meta property="og:site_name" content={metaData.title} />
 
-      <link rel="canonical" href={metaData.url} />
+      <link rel="canonical" href={metaData.url} /> */}
       <link
         rel="apple-touch-icon"
         sizes="114x114"

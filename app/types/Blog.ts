@@ -16,6 +16,7 @@ export interface BlogItemType {
   body: string
   image: ImageType
   categories: CategoryType[]
+  description: string
   createdAt: string
   updatedAt: string
 }
