@@ -7,21 +7,23 @@ import { NextRequest, NextResponse } from 'next/server'
 export function middleware(req: NextRequest) {
   const basicAuth = req.headers.get('authorization')
 
-  // if (process.env.NODE_ENV === 'production') {
-  console.log('本番環境')
-  if (basicAuth) {
-    const authValue = basicAuth.split(' ')[1]
-    const [user, pwd] = atob(authValue).split(':')
+  if (process.env.NODE_ENV === 'production') {
+    if (basicAuth) {
+      const authValue = basicAuth.split(' ')[1]
+      const [user, pwd] = atob(authValue).split(':')
 
-    if (user === '4dmin' && pwd === 'testpwd123') {
-      return NextResponse.next()
+      if (
+        user === process.env.BASIC_AUTH_USER &&
+        pwd === process.env.BASIC_AUTH_PASSWORD
+      ) {
+        return NextResponse.next()
+      }
     }
+    return new Response('Basic Auth required', {
+      status: 401,
+      headers: {
+        'WWW-Authenticate': 'Basic realm="Secure Area"',
+      },
+    })
   }
-  return new Response('Basic Auth required', {
-    status: 401,
-    headers: {
-      'WWW-Authenticate': 'Basic realm="Secure Area"',
-    },
-  })
-  // }
 }
