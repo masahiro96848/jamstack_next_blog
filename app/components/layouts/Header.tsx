@@ -7,6 +7,8 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { BsSearch } from 'react-icons/bs'
+/* constants */
+import { NAVIGATION_LINK } from '@/constants/navigation'
 /* styles */
 import styles from '@/styles/modules/header.module.scss'
 import { MenuModal } from '@/components/modals/MenuModal'
@@ -30,20 +32,20 @@ export const Header: React.FC = () => {
     <div className={styles.container}>
       <div className={styles.top}>
         <div className={styles.main}>
-          <Link href="/">
+          <Link href={NAVIGATION_LINK.TOP}>
             <div className={styles.title}>
               <h1>ZEROne</h1>
             </div>
           </Link>
-          <div className={styles.link}>
-            <Link href="/">
-              <h2>トップ</h2>
+          <div className={styles.links}>
+            <Link href={NAVIGATION_LINK.TOP}>
+              <h2 className={styles.link}>トップ</h2>
             </Link>
-            <Link href="/intro">
-              <h2>このブログについて</h2>
+            <Link href={NAVIGATION_LINK.INTRO}>
+              <h2 className={styles.link}>このブログについて</h2>
             </Link>
-            <Link href="/profile">
-              <h2>プロフィール</h2>
+            <Link href={NAVIGATION_LINK.PROFILE}>
+              <h2 className={styles.link}>プロフィール</h2>
             </Link>
           </div>
 

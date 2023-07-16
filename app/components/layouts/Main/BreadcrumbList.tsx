@@ -4,6 +4,8 @@
  */
 import React from 'react'
 import Link from 'next/link'
+/* constants */
+import { NAVIGATION_LINK } from '@/constants/navigation'
 /* styles */
 import styles from '@/styles/modules/breadcrumbList.module.scss'
 
@@ -27,7 +29,7 @@ export const BreadcrumbList: React.FC<Props> = (props: Props) => {
     <div className={styles.bread}>
       <ul className={styles.bread__list}>
         <li className={styles.bread__item}>
-          <Link href="/">
+          <Link href={NAVIGATION_LINK.TOP}>
             <span className={styles.bread__link}>HOME</span>
           </Link>
         </li>

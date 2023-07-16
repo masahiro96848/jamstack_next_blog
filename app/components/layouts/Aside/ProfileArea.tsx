@@ -7,6 +7,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 /* components */
 import { AsideSectionArea } from '@/components/layouts/Aside/AsideSectionArea'
+/* constants */
+import { NAVIGATION_LINK } from '@/constants/navigation'
 /* styles */
 import styles from '@/styles/layouts/aside/profileArea.module.scss'
 
@@ -32,11 +34,9 @@ export const ProfileArea = () => {
           <p className={styles.name}>Masahiro</p>
           <p className={styles.content}>フリーランスエンジニア</p>
 
-          <Link href={'/profile'}>
+          <Link href={NAVIGATION_LINK.PROFILE}>
             <p className={styles.more}>More</p>
           </Link>
-
-          <div></div>
         </div>
       </AsideSectionArea>
     </>
