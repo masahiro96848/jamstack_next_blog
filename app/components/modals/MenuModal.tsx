@@ -5,6 +5,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Modal from 'react-modal'
+import { AiOutlineClose } from 'react-icons/ai'
 /** styles */
 import styles from '@/styles/objects/components/modals/menuModal.module.scss'
 
@@ -50,7 +51,10 @@ export const MenuModal = (props: Props) => {
               <h2 className={styles.link}>プロフィール</h2>
             </Link>
           </div>
-          <button onClick={handleCloseMenuModal}>閉じる</button>
+
+          <div onClick={handleCloseMenuModal}>
+            <AiOutlineClose size={25} />
+          </div>
         </div>
       </Modal>
     </div>

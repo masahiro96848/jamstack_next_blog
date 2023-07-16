@@ -3,26 +3,16 @@
  * layouts/Main/Header
  * @package Components
  */
-import Link from 'next/link'
 import React, { useState } from 'react'
+import Link from 'next/link'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { BsSearch } from 'react-icons/bs'
-import Modal from 'react-modal'
 /* styles */
 import styles from '@/styles/modules/header.module.scss'
-import { MenuModal } from '../modals/MenuModal'
+import { MenuModal } from '@/components/modals/MenuModal'
 
 /**
  * Header
- * @returns
- */
-// type Props = {
-//   handleOpenMenuModal: () => void
-// }
-
-/**
- *
- * @param {Props} props
  * @returns
  */
 export const Header: React.FC = () => {
