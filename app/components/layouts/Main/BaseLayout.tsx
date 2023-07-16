@@ -27,6 +27,7 @@ export type Props = {
 export const BaseLayout: React.FC<Props> = (props: Props) => {
   /* props */
   const { children, breadName } = props
+
   return (
     <>
       <div className={styles.wrapper}>
