@@ -1,10 +1,14 @@
 import { Metadata } from 'next'
+import { getProfileApi } from '@/apis/ProfileApi'
 import '@/styles/globals.scss'
 
 export async function generateMetadata(): Promise<Metadata> {
+  const data = await getProfileApi()
+  const profile = data[0]
+
   return {
     title: `プロフィール | ZEROne Blog`,
-    description: 'ZEROneは学んだこと、役に立つ知識を発信していくブログです',
+    description: profile.description,
   }
 }
 
