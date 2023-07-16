@@ -1,19 +1,31 @@
+'use client'
 /**
  * layouts/Main/Header
  * @package Components
  */
+import React, { useState } from 'react'
 import Link from 'next/link'
-import React from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { BsSearch } from 'react-icons/bs'
 /* styles */
 import styles from '@/styles/modules/header.module.scss'
+import { MenuModal } from '@/components/modals/MenuModal'
 
 /**
  * Header
  * @returns
  */
-export const Header = () => {
+export const Header: React.FC = () => {
+  /* props */
+  // const { handleOpenMenuModal } = props
+  const [isOpen, setIsOpen] = useState(false)
+  const handleOpenMenuModal = () => {
+    setIsOpen(true)
+  }
+  const handleCloseMenuModal = () => {
+    setIsOpen(false)
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.top}>
@@ -41,9 +53,14 @@ export const Header = () => {
               <BsSearch size={25} />
             </div>
             {/* ハンバーガーメニュー */}
-            <div className={styles.sp__menu}>
+            <div className={styles.sp__menu} onClick={handleOpenMenuModal}>
               <AiOutlineMenu size={25} />
             </div>
+            {/* モーダル画面 */}
+            <MenuModal
+              isModalMenu={isOpen}
+              handleCloseMenuModal={handleCloseMenuModal}
+            />
           </div>
         </div>
       </div>

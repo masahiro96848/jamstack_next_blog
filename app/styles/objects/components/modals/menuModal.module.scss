@@ -1,0 +1,86 @@
+@import '@variable';
+
+.container {
+  width: 70%;
+  height: 100%;
+
+  margin: 80px auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: bold;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 20px;
+}
+
+.links {
+  font-size: 1.125rem;
+  text-align: center;
+  font-weight: bold;
+
+  color: var(--c-title);
+
+  @include mq(sm) {
+    font-size: 1rem;
+  }
+}
+
+.link {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.overlay__base {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0; /* Slide in from the right */
+  background-color: rgba(22, 21, 21, 0.56);
+  opacity: 0;
+  transition-property: background-color, opacity;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in-out;
+  z-index: 14;
+}
+
+.overlay__after {
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 1;
+}
+
+.overlay__before {
+  background-color: rgba(0, 0, 0, 0);
+  opacity: 0;
+  transition-duration: 500ms;
+}
+
+/* The modal body styles */
+.body__base {
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0; /* Slide in from the right */
+  bottom: 0;
+  transition-property: background-color, width;
+  transition-duration: 500ms;
+  border-radius: 0;
+  background-color: #f0eeee;
+  border: none;
+  z-index: 15; /* Make sure the modal body appears above the overlay */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+.body__after {
+  width: 70%; /* Adjust this value to control the width of the modal */
+  border: none;
+}
+
+.body__before {
+  width: 0;
+  background-color: transparent;
+}
