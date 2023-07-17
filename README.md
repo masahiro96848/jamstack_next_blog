@@ -1,5 +1,8 @@
 # ZEROne IT 技術ブログ
 
+## サイトURL
+https://zerone-blog.vercel.app/
+
 ## 機能
 
 - ブログ記事一覧
@@ -8,6 +11,7 @@
 - ブログ記事詳細
 - プロフィール
 - プライバシーポリシー
+- Google Analytics
 
 ## 技術構成
 
@@ -20,6 +24,7 @@
 - CSS Modules
 - Storybook7.0.17
 - Jest
+- Vercel(Hosting)
 - Github Actions
 
 ## microCMS のスキーマ設定
@@ -68,12 +73,14 @@ type: リスト形式
 
 - X_MICROCMS_API_KEY(microCMS の API キー)
 - NEXT_PUBLIC_BASE_URL(microCMS の API ベースの URL)
+- NEXT_PUBLIC_GOOGLE_ANALYTICS_ID(Google AnalyticsのID)
 
 例)
 
 ```
 X_MICROCMS_API_KEY=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 NEXT_PUBLIC_BASE_URL=https://xxxxxx.microcms.io/api/v1
+NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=xxxx-xxxxx
 ```
 
 # 開発方法
