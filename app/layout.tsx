@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { Suspense } from 'react'
 import { GaScript } from './ga_script'
+import Loading from './loading'
 import '@/styles/globals.scss'
 
 export const metadata: Metadata = {
@@ -15,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <Suspense>
+      <Suspense fallback={<Loading />}>
         <GaScript />
       </Suspense>
       <body>{children}</body>

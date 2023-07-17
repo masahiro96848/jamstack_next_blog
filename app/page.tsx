@@ -1,7 +1,7 @@
 /**
  * ブログ記事一覧ページ
  */
-import React, { useEffect } from 'react'
+import React from 'react'
 /* components */
 import { TopTemplate } from '@/components/templates/TopTemplate'
 
