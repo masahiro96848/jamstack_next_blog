@@ -61,6 +61,7 @@
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
     "@types/cheerio": "^0.22.31",
+    "@types/gtag.js": "^0.0.12",
     "@types/highlightjs": "^9.12.2",
     "@types/jest": "^29.5.1",
     "@types/react-anchor-link-smooth-scroll": "^1.0.2",
