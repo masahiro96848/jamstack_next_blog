@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { Suspense } from 'react'
 import Head from './head'
 import '@/styles/globals.scss'
 
@@ -14,7 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <Head />
+      <Suspense fallback={<div>loading</div>}>
+        <Head />
+      </Suspense>
       <body>{children}</body>
     </html>
   )
