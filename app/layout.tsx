@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import { Suspense } from 'react'
 import { GaScript } from '@/GaScript'
-import Loading from './loading'
+import Loading from '@/loading'
 import '@/styles/globals.scss'
 
 export const metadata: Metadata = {

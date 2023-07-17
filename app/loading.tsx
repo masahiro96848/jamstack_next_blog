@@ -1,3 +1,10 @@
+import React from 'react'
+import styles from '@/styles/layouts/loading.module.scss'
+
 export default function Loading() {
-  return <p className="p-2">Loading...</p>
+  return (
+    <div className={styles.overlay}>
+      <div className={styles.spinner}>Loading...</div>
+    </div>
+  )
 }
