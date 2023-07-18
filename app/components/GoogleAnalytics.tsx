@@ -4,7 +4,7 @@ import Script from 'next/script'
 import { useEffect } from 'react'
 import { GA_TRACKING_ID, existsGaId, pageview } from '@/libs/gtag'
 
-export const GaScript = () => {
+const GoogleAnalytics = () => {
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
@@ -33,3 +33,5 @@ export const GaScript = () => {
     </>
   )
 }
+
+export default GoogleAnalytics
