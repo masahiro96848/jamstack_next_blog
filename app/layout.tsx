@@ -1,8 +1,7 @@
 import { Metadata } from 'next'
+/* components */
+import GoogleAnalytics from '@/components/GoogleAnalytics'
 import { Suspense } from 'react'
-import { GaScript } from './ga_script'
-import Loading from './loading'
-import '@/styles/globals.scss'
 
 export const metadata: Metadata = {
   title: 'トップページ',
@@ -16,9 +15,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <Suspense fallback={<Loading />}>
-        <GaScript />
-      </Suspense>
+      <head>
+        <Suspense>
+          <GoogleAnalytics />
+        </Suspense>
+      </head>
       <body>{children}</body>
     </html>
   )
