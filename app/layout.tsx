@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 /* components */
 import GoogleAnalytics from '@/components/GoogleAnalytics'
-import { Suspense } from 'react'
+import '@/styles/globals.scss'
 
 export const metadata: Metadata = {
   title: 'トップページ',
@@ -16,9 +16,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <head>
-        <Suspense>
-          <GoogleAnalytics />
-        </Suspense>
+        <GoogleAnalytics />
       </head>
       <body>{children}</body>
     </html>

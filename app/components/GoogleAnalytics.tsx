@@ -1,10 +1,10 @@
 'use client'
+import { Suspense, useEffect } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation'
 import Script from 'next/script'
-import { useEffect } from 'react'
 import { GA_TRACKING_ID, existsGaId, pageview } from '@/libs/gtag'
 
-const GoogleAnalytics = () => {
+const GoogleAnalyticsScript = () => {
   const pathname = usePathname()
   const searchParams = useSearchParams()
 
@@ -34,4 +34,14 @@ const GoogleAnalytics = () => {
   )
 }
 
-export default GoogleAnalytics
+export default function GoogleAnalytics(): JSX.Element {
+  return (
+    <>
+      {GA_TRACKING_ID && (
+        <Suspense>
+          <GoogleAnalyticsScript />
+        </Suspense>
+      )}
+    </>
+  )
+}
