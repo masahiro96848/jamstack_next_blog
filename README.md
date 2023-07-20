@@ -1,6 +1,7 @@
 # ZEROne IT 技術ブログ
 
-## サイトURL
+## サイト URL
+
 https://zerone-blog.vercel.app/
 
 ## 機能
@@ -73,7 +74,7 @@ type: リスト形式
 
 - X_MICROCMS_API_KEY(microCMS の API キー)
 - NEXT_PUBLIC_BASE_URL(microCMS の API ベースの URL)
-- NEXT_PUBLIC_GOOGLE_ANALYTICS_ID(Google AnalyticsのID)
+- NEXT_PUBLIC_GOOGLE_ANALYTICS_ID(Google Analytics の ID)
 
 例)
 
