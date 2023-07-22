@@ -56,7 +56,6 @@ describe('【APIテスト】BlogApi test', () => {
       blogItemList.blogList = [blogItem]
 
       const apiMockFunc = apiMock.mockReturnValue(Promise.resolve(blogItemList))
-      console.log(apiMockFunc(categoryId))
 
       expect(await apiMockFunc(categoryId)).toEqual(blogItemList)
     })
