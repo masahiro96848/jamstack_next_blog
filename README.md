@@ -99,7 +99,7 @@ $ npm run build
 # 静的サイトを起動(localhost:3000)
 $ npm run start
 
-# storybookを起動
+# storybookを起動(localhost:6006)
 $ npm run storybook
 
 # 単体テストを実行
