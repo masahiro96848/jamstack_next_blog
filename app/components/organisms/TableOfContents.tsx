@@ -1,3 +1,4 @@
+'use client'
 /**
  * organisms/TitleArea
  * @package Component
@@ -25,18 +26,20 @@ export const TableOfContents: React.FC<Props> = (props: Props) => {
       {tableOfContents.length > 0 && (
         <div className={styles.container} id="create-table-of-contents">
           <h4>目次</h4>
-          {tableOfContents.map((toc) => {
-            const listStyle =
-              toc.name === 'h2' ? styles.list__h2 : styles.list__h1
+          <ul className={styles.lists} id="lists">
+            {tableOfContents.map((toc) => {
+              const listStyle =
+                toc.name === 'h2' ? styles.list__h2 : styles.list__h1
 
-            return (
-              <li className={listStyle} id={'list' + toc.name} key={toc.id}>
-                <AnchorLink offset="130" href={'#' + toc.id}>
-                  {toc.text}
-                </AnchorLink>
-              </li>
-            )
-          })}
+              return (
+                <li className={listStyle} id={'list' + toc.name} key={toc.id}>
+                  <AnchorLink offset="130" href={'#' + toc.id}>
+                    {toc.text}
+                  </AnchorLink>
+                </li>
+              )
+            })}
+          </ul>
         </div>
       )}
     </>

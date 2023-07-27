@@ -38,7 +38,7 @@ export const ProfileTemplate: React.FC = async () => {
           </div>
 
           {/* 記事本文 */}
-          <ParsedBody body={profile.body} />
+          <ParsedBody articleBody={profile.body} />
         </section>
       </BaseBlogPostLayout>
     </>
