@@ -11,7 +11,7 @@ import styles from '@/styles/objects/components/molecules/parsedBody.module.scss
  * Props
  */
 type Props = {
-  body: string
+  articleBody: string
 }
 
 /**
@@ -21,12 +21,12 @@ type Props = {
  */
 export const ParsedBody: React.FC<Props> = (props: Props) => {
   /* props */
-  const { body } = props
+  const { articleBody } = props
 
   return (
     <main className={styles.main}>
       {/* 記事本文 */}
-      <div className={styles.contents}>{parse(body)}</div>
+      <div className={styles.contents}>{parse(articleBody)}</div>
     </main>
   )
 }
